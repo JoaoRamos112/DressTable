@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=MonteCarlo&family=Sora:wght@100..800&display=swap');
+
+:root {
+    --azulClaro-color: #8699a3;
+    --branco-color: #d1d7ad;
+    --azulEscuro-color: #4c5b63;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--azulClaro-color);
+    padding-left: 2%;
+    font-family: "Sora", sans-serif;
+    font-size: 0.8em ;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    gap: 10%;
+    width: 100%;
+    position: fixed;
+}
+
+.scrolled{
+    height: 80vh;
+    flex-direction: column;
+    background-color:#d1d7ad;
+    z-index: 3;
+}
+
+
+img{
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.padding{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.divWrapper{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Nav bar */
+
+.hidden{
+    display: none !important; 
+}
+
+.menuLogoScrolled{
+    position: fixed;
+    height: 10%;
+    width: 10%;
+    top: 0;
+    left: 2%;
+    background-image: url(../Imagens/Logos/AF\ -\ imagem\ perfil\ -\ icon\ DRESS\ TABLE.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 4;
+}
+.menuLogoWrapper {
+    min-width: 30%;
+    height: 60%;
+    min-height: 30%;
+    margin-left: 10%;
+    background-image: url(../Imagens/Logos/logoDT\ -\ Horizontal\ -\ cores.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.menuOptionsWrapper {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.optionsClicked{
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3em;
+    gap: 0.5em;
+}
+
+.menuBtnWrapper{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    top: 0%;
+    border-radius: 100%;
+    background-color:#d1d7ad;
+    text-align: center;
+    margin-right: 3%;
+    margin-top: 1%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.menuBtn{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    mask-image: url(../Imagens/Icons/menu.svg);
+    mask-size: 50%;
+    mask-repeat: no-repeat;
+    mask-position: 50%;
+}
+
+
+/* About Section */
+.aboutSection {
+    display: flex;
+    height: 100vh;
+}
+
+.aboutSectionText { 
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.titleSlogan {
+    position: absolute  ;
+    height: 100%;
+}
+
+.title {
+    position: relative;
+    top: 10%;
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    color: #4c5b63;
+}
+
+.slogan{
+    position: relative;
+    margin: 0;
+    top: 10%;
+    font-family: "Bona Nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7em;
+    color: #8699a3;
+    z-index: 2;
+}
+
+.sloganElegancia{
+    position: relative;
+    top: -10%;
+    left: 10%;
+    font-family: "MonteCarlo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9em;
+    color: var(--branco-color);
+    z-index: 2;
+}
+
+.aboutSectionDesc{
+    position: relative;
+    width: 60%;
+    top: 90%;
+    font-family: "Bona Nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    color: var(--azulEscuro-color);
+}
+
+.aboutSectionImg {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 50%;
+    height: 110vh;
+    padding-top: 10%
+}
+
+.aboutSectionImg img{
+    object-position: right;
+}
+
+
+/* Produtos */
+
+.productsSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.produtosDivisao1{
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    margin-top: 10%;
+    width: 100%;
+    height: 130vh;
+}
+
+.produtoTalheres{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.produtosTitle{
+    font-family: "Sora", sans-serif;
+    color: #8699a3
+}
+
+.produtoSlogan{
+    font-family: "Sora", sans-serif;
+    font-size: 2.5em;
+    line-height: 1em;
+    color: #8699a3;
+    margin-top: 0;
+    margin-bottom: 25%;
+}
+
+.talheresTitle{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 2em;
+}
+
+.talheresDesc{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 0.8em;
+    margin-bottom: 5%;
+}
+
+.produtoGuarnanapos{
+    padding-top: 7%;
+}
+
+.guardanaposTitle{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 2em;
+}
+
+.guardanaposDesc{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 0.8em;
+    margin-bottom: 5%;
+}
+
+.acesoriosTitle{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 2em;
+    margin-top: 5%;
+}
+
+.acesoriosDesc{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 0.8em;
+}
+
+.toalhasTitle{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 2em;
+    margin-top: 65%;
+}
+
+
+.toalhasDesc{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 0.8em;
+    margin-bottom: 5%;
+}
+
+.produtosDivisao2{
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    width: 100%;
+    height: 100vh;
+    margin-top: 5%;
+}
+
+.caminhosTitle{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 2em;
+    margin-top: 20%;
+}
+
+
+.caminhosDesc{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 0.8em;
+    margin-bottom: 5%;
+}
+
+.produtosAcessórios button{
+    font-family: "Sora", sans-serif;
+    border-radius: 20px;
+    padding: 5%;
+    margin-bottom: 40%;
+    margin-top: 20%;
+    margin-left: 25%;
+    width: 50%;
+    background: none;
+    color: #8699a3;
+    border-color: #8699a3;
+}
+
+.individuaisTitle{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 2em;
+    margin-top: 20%;
+}
+
+
+.individuaisDesc{
+    font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 0.8em;
+    margin-bottom: 13%;
+}
+
+/* Areas */
+
+.areasSection{
+    height: 75vh;
+    display: flex;
+    margin-top: 10%;
+}
+
+.areasImgWrapper{
+    height: 80%;
+    width: 50%;
+}
+
+.areasTextWrapper{
+    padding-top: 10%;
+    padding-left: 5%;
+}
+
+.areasTitle{
+     font-family: "Sora", sans-serif;
+    color: #8699a3;
+    font-size: 1em;
+    padding-bottom: 3%;
+}
+
+.areasTextWrapper p{
+    font-family: "Sora", sans-serif;
+    color: #4c5b63;
+    font-size: 3em;
+}
+
+/* Rodape */
+
+.rodape{
+    position: absolute;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+    background-color:#8699a3 ;
+    overflow: hidden;
+}
+
+.wordCarrocel{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    animation: Scrolling 10s infinite linear;
+}
+
+.wordCarrocel p{
+    font-family: "Bona Nova", sans-serif;
+    color: #d1d7ad;
+    font-size: 3em;
+}
+
+@keyframes Scrolling {
+   from{
+    transform: translateX(0%);
+   } 
+   to{
+    transform: translateX(50%);
+   }
+}
+
+.rodapeLogo{
+    width: 8%;
+    padding-left: 47%;
+    padding-top: 10%;
+}
+
+.rodapeIcons{
+    display: flex;
+    width: 8%;
+    height: 3%;
+    filter: hue-rotate(--branco-color);
+    margin-left: 47%;
+    margin-top: 2%;
+}
+
+.rodapeIcons img{
+    object-fit: fill;
+}
+
+.rodapeTextWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.options p{
+    font-family: "Bona Nova", sans-serif;
+    color: #d1d7ad;
+    font-size: 1.4em;
+}
+
+.tradeMark{
+    font-family: "Bona Nova", sans-serif;
+    color: #d1d7ad;
+    font-size: 0.7em;    
+}

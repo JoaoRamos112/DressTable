@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=MonteCarlo&family=Sora:wght@100..800&display=swap');
+
+:root {
+    --azulClaro-color: #8699a3;
+    --branco-color: #d1d7ad;
+    --azulEscuro-color: #4c5b63;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--azulClaro-color);
+    padding-left: 2%;
+    font-family: "Sora", sans-serif;
+    font-size: 0.8em ;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    gap: 10%;
+    width: 100%;
+    position: fixed;
+}
+
+.scrolled{
+    height: 80vh;
+    flex-direction: column;
+    background-color:#d1d7ad;
+    z-index: 3;
+}
+
+
+img{
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.padding{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.divWrapper{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Nav bar */
+
+.hidden{
+    display: none !important; 
+}
+
+.menuLogoScrolled{
+    position: fixed;
+    height: 10%;
+    width: 10%;
+    top: 0;
+    left: 2%;
+    background-image: url(../Imagens/Logos/AF\ -\ imagem\ perfil\ -\ icon\ DRESS\ TABLE.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 4;
+}
+.menuLogoWrapper {
+    min-width: 30%;
+    height: 60%;
+    min-height: 30%;
+    margin-left: 10%;
+    background-image: url(../Imagens/Logos/logoDT\ -\ Horizontal\ -\ cores.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.menuOptionsWrapper {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.optionsClicked{
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3em;
+    gap: 0.5em;
+}
+
+.menuBtnWrapper{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    top: 0%;
+    border-radius: 100%;
+    background-color:#d1d7ad;
+    text-align: center;
+    margin-right: 3%;
+    margin-top: 1%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.menuBtn{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    mask-image: url(../Imagens/Icons/menu.svg);
+    mask-size: 50%;
+    mask-repeat: no-repeat;
+    mask-position: 50%;
+}
+
+/* About Section */
+.aboutSection {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.aboutSectionText { 
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.titleSlogan {
+    position: absolute  ;
+    height: 100%;
+}
+
+.title {
+    position: relative;
+    top: 10%;
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    color: #4c5b63;
+}
+
+.slogan{
+    position: relative;
+    margin: 0;
+    top: 10%;
+    font-family: "Bona Nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    color: #8699a3;
+    z-index: 2;
+}
+
+.sloganProdutos{
+    position: relative;
+    top: -3%;
+    left: 25%;
+    font-family: "MonteCarlo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7em;
+    color: var(--branco-color);
+    z-index: 2;
+}
+
+.aboutSectionDesc{
+    position: relative;
+    width: 60%;
+    top: 60%;
+    font-family: "Bona Nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    color: var(--azulEscuro-color);
+}
+
+.aboutSectionImg {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 40%;
+    height: 90vh;
+    padding-top: 10%
+}
+
+.aboutSectionImg img{
+    object-position: right;
+}
+
