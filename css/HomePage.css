@@ -6,9 +6,10 @@
     --azulEscuro-color: #4c5b63;
 }
 
-main {
-    height: 100%;
-    width: 100%;
+body{
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -18,7 +19,7 @@ a {
     color: var(--azulClaro-color);
     padding-left: 2%;
     font-family: "Sora", sans-serif;
-    font-size: 0.8em ;
+    font-size: 1.12em; 
 }
 
 p {
@@ -31,29 +32,29 @@ header {
     gap: 10%;
     width: 100%;
     position: fixed;
+    z-index: 99;
 }
 
-.scrolled{
-    height: 80vh;
+.scrolled {
+    height: 60vh;
     flex-direction: column;
-    background-color:#d1d7ad;
+    background-color: #d1d7ad;
     z-index: 3;
 }
 
-
-img{
+img {
     border-radius: 20px;
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.padding{
+.padding {
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.divWrapper{
+.divWrapper {
     width: 33%;
     display: flex;
     flex-direction: column;
@@ -62,11 +63,11 @@ img{
 
 /* Nav bar */
 
-.hidden{
+.hidden {
     display: none !important; 
 }
 
-.menuLogoScrolled{
+.menuLogoScrolled {
     position: fixed;
     height: 10%;
     width: 10%;
@@ -78,41 +79,46 @@ img{
     cursor: pointer;
     z-index: 4;
 }
+
 .menuLogoWrapper {
-    min-width: 30%;
-    height: 60%;
+    height: 60%; 
+    width: 40%;
     min-height: 30%;
     margin-left: 10%;
-    background-image: url(../Imagens/Logos/logoDT\ -\ Horizontal\ -\ cores.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     cursor: pointer;
+    object-fit: contain;
 }
 
+.menuLogoWrapper img {
+    width: 40%;
+}
 
 .menuOptionsWrapper {
     display: flex;
-    justify-content: right;
-    width: 100%;
+    justify-content: flex-end;
+    gap: 0.7em; 
+    width: 20%;
     padding-top: 2%;
     text-align: center;
+    margin-left: 10%;
 }
 
-.optionsClicked{
+.optionsClicked {
     flex-direction: column;
     justify-content: center;
-    font-size: 3em;
-    gap: 0.5em;
+    font-size: 3em; 
+    gap: 0.2em; 
+    margin-left: 40%;
 }
 
-.menuBtnWrapper{
+.menuBtnWrapper {
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     right: 2%;
     top: 0%;
     border-radius: 100%;
-    background-color:#d1d7ad;
+    background-color: #d1d7ad;
     text-align: center;
     margin-right: 3%;
     margin-top: 1%;
@@ -120,7 +126,7 @@ img{
     z-index: 4;
 }
 
-.menuBtn{
+.menuBtn {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -131,22 +137,23 @@ img{
     mask-position: 50%;
 }
 
-
 /* About Section */
+
 .aboutSection {
     display: flex;
     height: 100vh;
+    margin-bottom: 2%;
 }
 
-.aboutSectionText { 
-    height:80%;
+.aboutSectionText {
+    height: 80%;
     display: flex;
     flex-direction: column;
     padding-top: 5%;
 }
 
 .titleSlogan {
-    position: absolute  ;
+    position: absolute;
     height: 100%;
 }
 
@@ -158,38 +165,38 @@ img{
     color: #4c5b63;
 }
 
-.slogan{
+.slogan {
     position: relative;
     margin: 0;
     top: 10%;
     font-family: "Bona Nova", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 7em;
+    font-size: 9.8em; 
     color: #8699a3;
     z-index: 2;
 }
 
-.sloganElegancia{
+.sloganElegancia {
     position: relative;
-    top: -10%;
+    top: -7%;
     left: 10%;
     font-family: "MonteCarlo", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 9em;
+    font-size: 12.6em; 
     color: var(--branco-color);
     z-index: 2;
 }
 
-.aboutSectionDesc{
+.aboutSectionDesc {
     position: relative;
     width: 60%;
     top: 90%;
     font-family: "Bona Nova", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.4em;
     color: var(--azulEscuro-color);
 }
 
@@ -197,15 +204,14 @@ img{
     position: relative;
     float: right;
     overflow: hidden;
-    width: 50%;
+    width: 75%;
     height: 110vh;
-    padding-top: 10%
+    padding-top: 10%;
 }
 
-.aboutSectionImg img{
+.aboutSectionImg img {
     object-position: right;
 }
-
 
 /* Produtos */
 
@@ -215,7 +221,7 @@ img{
     width: 100%;
 }
 
-.produtosDivisao1{
+.produtosDivisao1 {
     display: flex;
     justify-content: space-between;
     gap: 3%;
@@ -224,86 +230,85 @@ img{
     height: 130vh;
 }
 
-.produtoTalheres{
+.produtoTalheres {
     width: 33%;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.produtosTitle{
+.produtosTitle {
     font-family: "Sora", sans-serif;
-    color: #8699a3
+    color: #8699a3;
 }
 
-.produtoSlogan{
+.produtoSlogan {
     font-family: "Sora", sans-serif;
-    font-size: 2.5em;
-    line-height: 1em;
+    font-size: 3.5em; 
+    line-height: 1.4em; 
     color: #8699a3;
     margin-top: 0;
     margin-bottom: 25%;
 }
 
-.talheresTitle{
+.talheresTitle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 2em;
+    font-size: 2.8em; 
 }
 
-.talheresDesc{
+.talheresDesc {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 0.8em;
+    font-size: 1.12em; 
     margin-bottom: 5%;
 }
 
-.produtoGuarnanapos{
+.produtoGuarnanapos {
     padding-top: 7%;
 }
 
-.guardanaposTitle{
+.guardanaposTitle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 2em;
+    font-size: 2.8em; 
 }
 
-.guardanaposDesc{
+.guardanaposDesc {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 0.8em;
+    font-size: 1.12em; 
     margin-bottom: 5%;
 }
 
-.acesoriosTitle{
+.acesoriosTitle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 2em;
+    font-size: 2.8em; 
     margin-top: 5%;
 }
 
-.acesoriosDesc{
+.acesoriosDesc {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 0.8em;
+    font-size: 1.12em; 
 }
 
-.toalhasTitle{
+.toalhasTitle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 2em;
+    font-size: 2.8em; 
     margin-top: 65%;
 }
 
-
-.toalhasDesc{
+.toalhasDesc {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 0.8em;
+    font-size: 1.12em; 
     margin-bottom: 5%;
 }
 
-.produtosDivisao2{
+.produtosDivisao2 {
     display: flex;
     justify-content: space-between;
     gap: 3%;
@@ -312,22 +317,21 @@ img{
     margin-top: 5%;
 }
 
-.caminhosTitle{
+.caminhosTitle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 2em;
+    font-size: 2.8em; 
     margin-top: 20%;
 }
 
-
-.caminhosDesc{
+.caminhosDesc {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 0.8em;
+    font-size: 1.12em; 
     margin-bottom: 5%;
 }
 
-.produtosAcessórios button{
+.produtosAcessórios button {
     font-family: "Sora", sans-serif;
     border-radius: 20px;
     padding: 5%;
@@ -340,105 +344,131 @@ img{
     border-color: #8699a3;
 }
 
-.individuaisTitle{
+.individuaisTitle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 2em;
+    font-size: 2.8em; 
     margin-top: 20%;
 }
 
-
-.individuaisDesc{
+.individuaisDesc {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 0.8em;
+    font-size: 1.12em; 
     margin-bottom: 13%;
 }
 
 /* Areas */
 
-.areasSection{
+.areasSection {
     height: 75vh;
     display: flex;
     margin-top: 10%;
 }
 
-.areasImgWrapper{
+.areasImgWrapper {
     height: 80%;
     width: 50%;
 }
 
-.areasTextWrapper{
+.areasTextWrapper {
     padding-top: 10%;
     padding-left: 5%;
 }
 
-.areasTitle{
-     font-family: "Sora", sans-serif;
+.areasTitle {
+    font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 1em;
+    font-size: 1.4em; 
     padding-bottom: 3%;
 }
 
-.areasTextWrapper p{
+.areasTextWrapper p {
     font-family: "Sora", sans-serif;
     color: #4c5b63;
-    font-size: 3em;
+    font-size: 4.2em; 
 }
 
 /* Rodape */
 
-.rodape{
-    position: absolute;
+.rodape {
     left: 0;
     height: 90vh;
     width: 100%;
-    background-color:#8699a3 ;
+    background-color: #8699a3;
     overflow: hidden;
 }
 
-.wordCarrocel{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5%;
-    animation: Scrolling 10s infinite linear;
+.wordCarrocel {
+    display: block !important;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin-bottom: 10%;
 }
 
-.wordCarrocel p{
+.wordWrapper {
+    display: inline-block;
+    justify-content: center;
+    gap: 5%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    animation: 10s Scrolling infinite linear;
+}
+
+
+
+.wordWrapper p {
+    display: inline-block; 
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
-    font-size: 3em;
+    font-size: 4.2em;
+    margin: 0 2%; 
 }
 
 @keyframes Scrolling {
-   from{
-    transform: translateX(0%);
-   } 
-   to{
-    transform: translateX(50%);
-   }
+    from {
+        transform: translateX(-50%);
+    } 
+    to {
+        transform: translateX(50%);
+    }
 }
 
-.rodapeLogo{
-    width: 8%;
-    padding-left: 47%;
-    padding-top: 10%;
+@keyframes Scrolling1 {
+    from {
+        transform: translateX(-50%);
+    } 
+    to {
+        transform: translateX(50%);
+    }
 }
 
-.rodapeIcons{
+
+.rodapeLogo {
+    width: 100%;
+    height: 15%;
+}
+
+.rodapeLogo img{
+    object-fit: contain;
+}
+
+.rodapeIcons {
     display: flex;
-    width: 8%;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
     height: 3%;
     filter: hue-rotate(--branco-color);
-    margin-left: 47%;
     margin-top: 2%;
 }
 
-.rodapeIcons img{
-    object-fit: fill;
+.rodapeIcons img {
+    object-fit: contain;
+    width: 2em;
 }
 
-.rodapeTextWrapper{
+.rodapeTextWrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -446,7 +476,7 @@ img{
     margin-top: 4%;
 }
 
-.options{
+.options {
     display: flex;
     justify-content: center;
     gap: 1%;
@@ -455,14 +485,58 @@ img{
     margin-bottom: 1%;
 }
 
-.options p{
+.options p {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
-    font-size: 1.4em;
+    font-size: 1.96em; 
 }
 
-.tradeMark{
+.tradeMark {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
-    font-size: 0.7em;    
+    font-size: 0.98em; 
+}
+
+
+@media (max-width: 1366px) {
+
+    body{
+        font-size: 0.7em;
+    }
+
+    .menuBtnWrapper{
+        height: 50px;
+        width: 50px;
+    }
+
+    .sloganElegancia{
+
+    }
+
+}
+
+@media (min-height: 1024px){
+
+
+
+    .aboutSection{
+        height:60vh;
+    }
+
+    .aboutSectionImg{
+        height: 50vh;
+    }
+
+    .slogan{
+        line-height: 0.8em;
+    }
+
+    .sloganElegancia{
+        top: 3%;
+    }
+
+    .aboutSectionDesc{
+        top: 80%;
+    }
+
 }

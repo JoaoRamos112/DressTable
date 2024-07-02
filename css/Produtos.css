@@ -5,10 +5,10 @@
     --branco-color: #d1d7ad;
     --azulEscuro-color: #4c5b63;
 }
-
-main {
-    height: 100%;
-    width: 100%;
+body{
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -18,7 +18,7 @@ a {
     color: var(--azulClaro-color);
     padding-left: 2%;
     font-family: "Sora", sans-serif;
-    font-size: 0.8em ;
+    font-size: 1.12em; 
 }
 
 p {
@@ -31,8 +31,8 @@ header {
     gap: 10%;
     width: 100%;
     position: fixed;
+    z-index: 99;
 }
-
 .input{
     border-radius: 10px;
     width: 100%;
@@ -41,7 +41,7 @@ header {
     font-family: "Bona Nova", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 1em;
     margin-bottom: 2%;
 }
@@ -54,33 +54,32 @@ textarea{
     font-family: "Bona Nova", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 1em;
     margin-top: 3%;
     resize: none;
 }
 
-.scrolled{
+.scrolled {
     height: 80vh;
     flex-direction: column;
-    background-color:#d1d7ad;
+    background-color: #d1d7ad;
     z-index: 3;
 }
 
-
-img{
+img {
     border-radius: 20px;
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.padding{
+.padding {
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.divWrapper{
+.divWrapper {
     width: 33%;
     display: flex;
     flex-direction: column;
@@ -89,11 +88,11 @@ img{
 
 /* Nav bar */
 
-.hidden{
+.hidden {
     display: none !important; 
 }
 
-.menuLogoScrolled{
+.menuLogoScrolled {
     position: fixed;
     height: 10%;
     width: 10%;
@@ -105,40 +104,46 @@ img{
     cursor: pointer;
     z-index: 4;
 }
+
 .menuLogoWrapper {
-    width: 20%;
-    height: 60%;
+    height: 60%; 
+    width: 40%;
     min-height: 30%;
     margin-left: 10%;
     cursor: pointer;
     object-fit: contain;
 }
 
+.menuLogoWrapper img {
+    width: 40%;
+}
 
 .menuOptionsWrapper {
     display: flex;
-    justify-content: right;
-    width: 100%;
+    justify-content: flex-end;
+    gap: 0.7em; 
+    width: 20%;
     padding-top: 2%;
     text-align: center;
-    margin-right: 10%;
+    margin-left: 10%;
 }
 
-.optionsClicked{
+.optionsClicked {
     flex-direction: column;
     justify-content: center;
-    font-size: 3em;
-    gap: 0.5em;
+    font-size: 4.2em; 
+    gap: 0.7em; 
+    margin-left: 40%;
 }
 
-.menuBtnWrapper{
+.menuBtnWrapper {
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     right: 2%;
     top: 0%;
     border-radius: 100%;
-    background-color:#d1d7ad;
+    background-color: #d1d7ad;
     text-align: center;
     margin-right: 3%;
     margin-top: 1%;
@@ -146,7 +151,7 @@ img{
     z-index: 4;
 }
 
-.menuBtn{
+.menuBtn {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -156,7 +161,6 @@ img{
     mask-repeat: no-repeat;
     mask-position: 50%;
 }
-
 /* About Section */
 .aboutSection {
     display: flex;
@@ -193,7 +197,7 @@ img{
     font-family: "Bona Nova", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 4em;
+    font-size: 7em;
     color: #8699a3;
     z-index: 2;
 }
@@ -205,7 +209,7 @@ img{
     font-family: "MonteCarlo", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 7em;
+    font-size: 12em;
     color: var(--branco-color);
     z-index: 2;
 }
@@ -213,10 +217,11 @@ img{
 .aboutSectionDesc{
     position: relative;
     top: 40%;
+    width: 80%;
     font-family: "Bona Nova", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.3em;
+    font-size: 1.8em;
     color: var(--azulEscuro-color);
 }
 
@@ -226,7 +231,7 @@ img{
     font-family: "Bona Nova", sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.5em;
     color: var(--azulEscuro-color);
 }
 
@@ -283,7 +288,7 @@ img{
     position: absolute;
     top: 20%;
     left: 10%;
-    font-size: 4em;
+    font-size: 7em;
     line-height: 0.8em;
 }
 
@@ -293,7 +298,7 @@ img{
     font-family: "MonteCarlo", cursive !important;
     font-weight: 400;
     font-style: normal;
-    font-size: 7em;
+    font-size: 12em;
 }
 
 .sustentavelDesc{
@@ -303,14 +308,12 @@ img{
     font-family: "Bona Nova", sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 0.8em;
+    font-size: 1.4em;
 }
 
 /* Rodape */
 
 .rodape{
-    position: absolute;
-    left: 0;
     height: 150vh;
     width: 100%;
     background-color:#8699a3 ;
@@ -332,6 +335,7 @@ img{
     margin-left: 30%;
     text-align: center;
     padding-top: 10%;
+    margin-bottom: 10%;
 }
 
 .inputGrid{
@@ -356,7 +360,7 @@ img{
 }
 
 .checkboxAndText label{
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-family: "Bona Nova", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -365,8 +369,8 @@ img{
 }
 
 .checkboxAndText input{
-    height: 1.5em;
-    width: 1.5em;
+    height: 2em;
+    width: 2em;
 }
 
 .checkboxEnviarWrapper{
@@ -375,43 +379,51 @@ img{
     width: 30%;
 }
 
-.checkboxEnviar{
-    font-size: 2em !important;
-}
-
 .enviarImgWrapper{
-    width: 30px;
-    height: 30px;
-    padding: 2%;
+    background-color: #d1d7ad;
     border-radius: 100%;
-    background-color:#d1d7ad;
-    cursor: pointer;
+    height: 75px;
+    width: 75px;
+
 }
 
-.enviarImgWrapper img{
-    object-fit: cover;  
+.checkboxEnviarWrapper img{
+    height: 60%;
+    width: 60%;
+    margin-top: 15%;
 }
 
-.rodapeLogo{
-    width: 8%;
-    padding-left: 47%;
-    padding-top: 10%;
+
+.checkboxEnviar{
+    font-size: 3em !important;
 }
 
-.rodapeIcons{
+
+.rodapeLogo {
+    width: 100%;
+    height: 15%;
+}
+
+.rodapeLogo img{
+    object-fit: contain;
+}
+
+.rodapeIcons {
     display: flex;
-    width: 8%;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
     height: 3%;
     filter: hue-rotate(--branco-color);
-    margin-left: 47%;
     margin-top: 2%;
 }
 
-.rodapeIcons img{
-    object-fit: fill;
+.rodapeIcons img {
+    object-fit: contain;
+    width: 2em;
 }
 
-.rodapeTextWrapper{
+.rodapeTextWrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -419,7 +431,7 @@ img{
     margin-top: 4%;
 }
 
-.options{
+.options {
     display: flex;
     justify-content: center;
     gap: 1%;
@@ -428,14 +440,17 @@ img{
     margin-bottom: 1%;
 }
 
-.options p{
+.options p {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
-    font-size: 1.4em;
+    font-size: 1.96em; 
 }
 
-.tradeMark{
+.tradeMark {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
-    font-size: 0.7em;    
+    font-size: 0.98em; 
 }
+
+
+/*<600px,>601px,768px,992px,1200px*/
