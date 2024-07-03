@@ -7,6 +7,7 @@ var menuOptions = document.getElementById("idMenuOptionsWrapper");
 var menuLogoWrapper = document.getElementById("idMenuLogoWrapper");
 var clicked = false;
 
+
 document.addEventListener("scroll", function() {
     if(window.scrollY>30){
         menuBtn.classList.remove("hidden");
@@ -24,8 +25,11 @@ document.addEventListener("scroll", function() {
         menuLogoWrapper.classList.remove("hidden");
     }
 
+    clicked == false;
 
 });
+
+
 
 menuBtn.addEventListener('click',function(){
     if(clicked == true){
@@ -40,5 +44,9 @@ menuBtn.addEventListener('click',function(){
 menuLogo.addEventListener("click",function(){
     window.scrollTo({top: 0, behavior:"smooth"});
 })
+
+checkWindowSize();
+
+
 
 });

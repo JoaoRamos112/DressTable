@@ -10,6 +10,7 @@ body{
     display: block;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 a {
@@ -55,10 +56,18 @@ img {
 }
 
 .divWrapper {
-    width: 33%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    height: 70vh;
+}
+
+.divWrapper img{
+    height: 60%;
+}
+
+.topPadding{
+    padding-top:40%;
 }
 
 /* Nav bar */
@@ -109,6 +118,7 @@ img {
     font-size: 3em; 
     gap: 0.2em; 
     margin-left: 40%;
+    display: block !important;
 }
 
 .menuBtnWrapper {
@@ -221,20 +231,19 @@ img {
     width: 100%;
 }
 
-.produtosDivisao1 {
-    display: flex;
-    justify-content: space-between;
-    gap: 3%;
-    margin-top: 10%;
-    width: 100%;
-    height: 130vh;
+.produtosSection{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);  
+    column-gap: 2%;
+    margin-top: 20%;
 }
 
-.produtoTalheres {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.produtosTitleWrapper{
+    position: absolute;
+    width: 20%;
+    top:120%
 }
 
 .produtosTitle {
@@ -251,84 +260,24 @@ img {
     margin-bottom: 25%;
 }
 
-.talheresTitle {
+.titleStyle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
     font-size: 2.8em; 
 }
 
-.talheresDesc {
+.descStyle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
     font-size: 1.12em; 
     margin-bottom: 5%;
 }
 
-.produtoGuarnanapos {
-    padding-top: 7%;
-}
 
-.guardanaposTitle {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 2.8em; 
-}
-
-.guardanaposDesc {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 1.12em; 
-    margin-bottom: 5%;
-}
-
-.acesoriosTitle {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 2.8em; 
-    margin-top: 5%;
-}
-
-.acesoriosDesc {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 1.12em; 
-}
-
-.toalhasTitle {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 2.8em; 
-    margin-top: 65%;
-}
-
-.toalhasDesc {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 1.12em; 
-    margin-bottom: 5%;
-}
-
-.produtosDivisao2 {
-    display: flex;
-    justify-content: space-between;
-    gap: 3%;
-    width: 100%;
-    height: 100vh;
-    margin-top: 5%;
-}
-
-.caminhosTitle {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 2.8em; 
-    margin-top: 20%;
-}
-
-.caminhosDesc {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
-    font-size: 1.12em; 
-    margin-bottom: 5%;
+.acesoriosWrapper{
+    position: absolute;
+    top:38%;
+    width: 30%;
 }
 
 .produtosAcessórios button {
@@ -509,34 +458,134 @@ img {
         width: 50px;
     }
 
-    .sloganElegancia{
-
-    }
 
 }
 
-@media (min-height: 1024px){
-
-
-
-    .aboutSection{
-        height:60vh;
+@media (max-width:1200px){
+    body{
+        font-size: 0.7em;
     }
 
-    .aboutSectionImg{
-        height: 50vh;
+    .menuOptionsWrapper a {
+        color: white;
+        line-height: 2em;
+        font-size: 1.5em;
+    }
+
+    .menuBtnWrapper{
+        display: block !important;
+    }
+
+    .menuLogoWrapper img{
+        object-fit: contain;
+    }
+
+    .aboutSection{
+        height: 40vh;
     }
 
     .slogan{
-        line-height: 0.8em;
+        line-height: 0.7em;
     }
 
     .sloganElegancia{
-        top: 3%;
+        top: 2%;
+    }
+
+    .produtosTitleWrapper{
+        top: 45%;
+        width: 30%;
+        font-size: 0.8em;
+    }
+
+    .acesoriosWrapper{
+        top: 65%;
+        left:0;
+    }
+
+    .produtosSection{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .divWrapper{
+        height: 50vh;
+    }
+
+    .topPadding{
+        padding-top: 10%;
+    }
+
+    .aboutSectionImg{
+        height: 40vh;
+        width: 40%;
+    }
+
+    .rodape{
+        height: 50vh;
+    }
+}
+
+@media (max-width:900px){
+    body{
+        font-size: 0.6em;
+    }
+
+    .aboutSectionText{
+        font-size: 0.8em;
+    }
+
+    .topPadding{
+        padding-top: 20%;
+    }
+}
+
+@media (max-width:600px){
+    body{
+        font-size: 0.5em;
+    }
+
+    header{
+        top: 0;
+    }
+    .aboutSection{
+        margin-top: 10%;
+    }
+    
+    .menuBtnWrapper{
+        width: 30px;
+        height: 30px;
+    }
+
+    .sloganElegancia{
+        top: 5%;
+    }
+
+    .aboutSectionText{
+        font-size: 0.6em;
     }
 
     .aboutSectionDesc{
-        top: 80%;
+        font-size: 2em;
+        width: 100%;
+    }
+
+    .aboutSectionImg{
+        height: 60%;
+        width: 80%;
+    }
+
+    .produtosSection{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+
+    .produtosTitleWrapper{
+        width: 90%;
+        top: 45%;
+        font-size: 1.2em;
+    }
+
+    .topPadding{
+        padding-top: 20%;
     }
 
 }
