@@ -5,7 +5,33 @@ var menuBtn = document.getElementById("idMenuBtn");
 var header = document.getElementById("idHeader");
 var menuOptions = document.getElementById("idMenuOptionsWrapper");
 var menuLogoWrapper = document.getElementById("idMenuLogoWrapper");
+var produtosTalheres = document.getElementById("idProdutosTalheres");
+var produtosGuarnanapos = document.getElementById("idProdutosGuarnanapos");
+var produtosToalha = document.getElementById("idProdutosToalha");
+var produtosCaminhos = document.getElementById("idProdutosCaminhos");
+var produtosAcessorios = document.getElementById("idProdutosAcessorios");
+var produtosIndividuais = document.getElementById("idProdutosIndividuais");
 var clicked = false;
+let larguraAtual;
+
+function obterLarguraAtual() {
+    larguraAtual = window.innerWidth;
+    if(larguraAtual<1200 & larguraAtual>600 ){
+        produtosGuarnanapos.classList.remove("topPadding");
+        produtosIndividuais.classList.remove("topPadding");
+        produtosCaminhos.classList.remove("topPadding");
+        produtosTalheres.classList.add("topPadding");
+        produtosToalha.classList.add("topPadding");
+        produtosAcessorios.classList.add("topPadding");
+    }else if(larguraAtual<=600){
+        produtosTalheres.classList.add("topPadding");
+        produtosToalha.classList.remove("topPadding");
+        produtosAcessorios.classList.remove("topPadding");
+        produtosGuarnanapos.classList.remove("topPadding");
+        produtosIndividuais.classList.remove("topPadding");
+        produtosCaminhos.classList.remove("topPadding")
+    }
+}
 
 
 document.addEventListener("scroll", function() {
@@ -45,8 +71,8 @@ menuLogo.addEventListener("click",function(){
     window.scrollTo({top: 0, behavior:"smooth"});
 })
 
-checkWindowSize();
 
+obterLarguraAtual();
 
 
 });
