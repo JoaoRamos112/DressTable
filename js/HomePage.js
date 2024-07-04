@@ -23,6 +23,7 @@ function obterLarguraAtual() {
         produtosTalheres.classList.add("topPadding");
         produtosToalha.classList.add("topPadding");
         produtosAcessorios.classList.add("topPadding");
+        menuLogoWrapper.classList.add("hidden");
     }else if(larguraAtual<=600){
         produtosTalheres.classList.add("topPadding");
         produtosToalha.classList.remove("topPadding");
@@ -42,6 +43,7 @@ document.addEventListener("scroll", function() {
         menuOptions.classList.add("optionsClicked");
         menuLogoWrapper.classList.add("hidden");
         header.classList.add("hidden");
+        clicked = false;
     }else{
         menuBtn.classList.add("hidden");
         menuLogo.classList.add("hidden");
@@ -49,10 +51,8 @@ document.addEventListener("scroll", function() {
         header.classList.remove("scrolled");
         menuOptions.classList.remove("optionsClicked");
         menuLogoWrapper.classList.remove("hidden");
+        clicked = false;
     }
-
-    clicked == false;
-
 });
 
 
