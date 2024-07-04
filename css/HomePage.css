@@ -286,14 +286,20 @@ img {
     height: 40%;
 }
 
-.produtosAcessórios button {
+.buttonMaisProdutosWrapper{
+    position: absolute;
+    top: 85%;
+    display: flex;
+    justify-content: center;
+    height: 7vh;
+    width: 100%;
+}
+
+.buttonMaisProdutosWrapper button {
     font-family: "Sora", sans-serif;
+    height: 100%;
+    width: 15%;
     border-radius: 20px;
-    padding: 5%;
-    margin-bottom: 40%;
-    margin-top: 20%;
-    margin-left: 25%;
-    width: 50%;
     background: none;
     color: #8699a3;
     border-color: #8699a3;
@@ -453,7 +459,7 @@ img {
 }
 
 
-@media (max-width: 1366px) {
+@media (max-width: 1366px)  {
 
     body{
         font-size: 0.7em;
@@ -467,9 +473,20 @@ img {
 
 }
 
+@media (max-width: 1366px) and (max-height:1080px) {
+
+
+    .sloganElegancia{
+        top: 0%;
+    }
+
+
+
+}
+
 @media (max-width:1200px){
     body{
-        font-size: 0.7em;
+        font-size: 0.55em;
     }
 
     .menuOptionsWrapper a {
@@ -487,7 +504,11 @@ img {
     }
 
     .aboutSection{
-        height: 40vh;
+        height: 60vh;
+    }
+
+    .aboutSectionDesc{
+        top: 100%;
     }
 
     .slogan{
@@ -495,11 +516,11 @@ img {
     }
 
     .sloganElegancia{
-        top: 2%;
+        top: 0;
     }
 
     .produtosTitleWrapper{
-        top: 45%;
+        top: 70%;
         width: 30%;
         font-size: 0.8em;
     }
@@ -527,6 +548,27 @@ img {
 
     .rodape{
         height: 50vh;
+    }
+}
+
+@media (max-width:1200px) and (max-height:1080px){
+    .sloganElegancia{
+        top: 3%;
+    }
+
+    .buttonMaisProdutosWrapper{
+        top: 97%;
+        width: 100%;
+    }
+
+    .buttonMaisProdutosWrapper button{
+        width: 25%;
+    }
+}
+
+@media (max-width:1200px) and (max-height:1400px){
+    .sloganElegancia{
+        top: 4%;
     }
 }
 
@@ -586,7 +628,7 @@ img {
 
     .produtosTitleWrapper{
         width: 90%;
-        top: 45%;
+        top: 65%;
         font-size: 1.2em;
     }
 
