@@ -41,6 +41,11 @@ header {
     z-index: 99;
 }
 
+.sombra{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
 .scroll-animation {
     opacity: 0;
     transform: translateY(50px);
@@ -51,7 +56,6 @@ header {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 
 img {
@@ -105,7 +109,7 @@ img {
 }
 
 .menuLogoWrapper {
-    height: 60%; 
+    height: 100%; 
     width: 40%;
     min-height: 30%;
     margin-left: 10%;
@@ -186,6 +190,11 @@ img {
     margin-top: 1%;
     cursor: pointer;
     z-index: 4;
+    opacity: 0.5;
+}
+
+.menuBtnWrapper:hover{
+    opacity: 1;
 }
 
 .menuBtn {
@@ -198,6 +207,44 @@ img {
     mask-repeat: no-repeat;
     mask-position: 50%;
 }
+
+/* Scroll Btn */
+.scrollArrowWrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 140px;
+    width: 75px;
+    top: 75%;
+    transition: opacity 0.5s ease; /* Suave transição de opacidade */
+}
+
+.scrollArrowWrapper.faded {
+    opacity: 0; /* Elemento invisível */
+}
+
+.scrollArrowWrapper.visible {
+    opacity: 1; /* Elemento visível */
+}
+
+
+.scrollArrowWrapper img{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 40%;
+    top: 80%;
+    transform: rotate(-90deg);
+}
+.scrollArrowWrapper p{
+    transform: rotate(-90deg);
+    font-family: "Sora", sans-serif;
+    color: #4c5b63;
+    font-size: 1.3em;
+}
+
+
 
 /* About Section */
 
@@ -340,6 +387,12 @@ img {
     justify-content: center;
     height: 7vh;
     width: 100%;
+}
+
+.buttonMaisProdutosWrapper button:hover{
+    border: 0;
+    background-color: #d1d7ad;
+    cursor: pointer;
 }
 
 .buttonMaisProdutosWrapper button {
@@ -596,6 +649,10 @@ img {
     .rodape{
         height: 50vh;
     }
+
+    .scrollArrowWrapper {
+        display: none;
+    }
 }
 
 @media (max-width:1200px) and (max-height:1080px){
@@ -650,11 +707,9 @@ img {
 
     header{
         top: 0;
+        height: 5vh;
     }
-    .aboutSection{
-        margin-top: 10%;
-    }
-    
+
     .menuBtnWrapper{
         width: 30px;
         height: 30px;

@@ -18,7 +18,7 @@ a {
     color: var(--azulClaro-color);
     padding-left: 2%;
     font-family: "Sora", sans-serif;
-    font-size: 1.12em; 
+    font-size: 1.5em; 
 }
 
 a:hover{
@@ -84,6 +84,10 @@ img {
     height: 100%;
 }
 
+.sombra{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
 .padding {
     margin-left: 10%;
     margin-right: 10%;
@@ -116,7 +120,7 @@ img {
 }
 
 .menuLogoWrapper {
-    height: 60%; 
+    height: 100%; 
     width: 40%;
     min-height: 30%;
     margin-left: 10%;
@@ -209,6 +213,74 @@ img {
     mask-repeat: no-repeat;
     mask-position: 50%;
 }
+
+/* Back Btn */
+.backArrowWrapper{
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    gap: 7%;
+    flex-direction: column;
+    height: 100%;
+    width: 75px;
+    cursor: pointer;
+    transition: opacity 0.5s ease; 
+}
+
+.backArrowWrapper:hover{
+    background-image: linear-gradient(to right,rgb(134, 153, 163,0.5), transparent);
+
+}
+
+.backArrowWrapper img{
+    width: 20px;
+    height: 20px;
+    margin-left: 35%;
+}
+.backArrowWrapper p{
+    transform: rotate(-90deg);
+    font-family: "Sora", sans-serif;
+    color: #4c5b63;
+    font-size: 1.3em;
+}
+
+/* Scroll Btn */
+.scrollArrowWrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 140px;
+    width: 75px;
+    top: 75%;
+    transition: opacity 0.5s ease; /* Suave transição de opacidade */
+}
+
+.scrollArrowWrapper.faded {
+    opacity: 0; /* Elemento invisível */
+}
+
+.scrollArrowWrapper.visible {
+    opacity: 1; /* Elemento visível */
+}
+
+
+.scrollArrowWrapper img{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 40%;
+    top: 80%;
+    transform: rotate(-90deg);
+}
+.scrollArrowWrapper p{
+    transform: rotate(-90deg);
+    font-family: "Sora", sans-serif;
+    color: #4c5b63;
+    font-size: 1.3em;
+}
+
+
 
 /* About Section */
 .aboutSection {
@@ -559,6 +631,14 @@ img {
 
     .rodapeLogo{
         height: 5%;
+    }
+
+    .scrollArrowWrapper {
+        display: none;
+    }
+
+    .backArrowWrapper{
+        display: none;
     }
 
 }

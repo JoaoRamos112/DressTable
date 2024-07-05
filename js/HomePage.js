@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var produtosCaminhos = document.getElementById("idProdutosCaminhos");
     var produtosAcessorios = document.getElementById("idProdutosAcessorios");
     var produtosIndividuais = document.getElementById("idProdutosIndividuais");
+    var scrollBtn = document.getElementById("idScrollArrow");
+    var backBtn = document.getElementById("idBackArrow");
     var clicked = false;
     let larguraAtual;
 
@@ -50,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (window.scrollY > 30) {
             menuBtn.classList.remove("hidden");
             menuLogo.classList.remove("hidden");
+            scrollBtn.classList.add("faded");
+            scrollBtn.classList.remove("visible");
             if (menuOptions.classList.contains('menuWrapperScrolled')) {
                 menuOptions.style.animation = 'slideUp 0.5s ease-in-out';
                 setTimeout(() => {
@@ -61,6 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             menuBtn.classList.add("hidden");
             menuLogo.classList.add("hidden");
+            scrollBtn.classList.remove("faded");
+            scrollBtn.classList.add("visible");
             clicked = false;
         }
     });
@@ -84,6 +90,10 @@ document.addEventListener("DOMContentLoaded", function() {
     menuLogo.addEventListener("click", function() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
+    backBtn.addEventListener("click", function(){
+        window.location.href = "\HomePage.html"
+    })
 
     obterLarguraAtual();
 
