@@ -257,11 +257,11 @@ img {
 }
 
 .scrollArrowWrapper.faded {
-    opacity: 0; /* Elemento invisível */
+    opacity: 0; 
 }
 
 .scrollArrowWrapper.visible {
-    opacity: 1; /* Elemento visível */
+    opacity: 1; 
 }
 
 
