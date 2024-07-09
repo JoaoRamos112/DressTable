@@ -145,6 +145,18 @@ img {
     font-size: 1.8em;
 }
 
+
+.headerLogoScrolled{
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url(../Imagens/Logos/logoDT\ -\ Carimbo\ -\ branco.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 .headerMenuBtnWrapper {
     position: fixed;
     width: 75px;

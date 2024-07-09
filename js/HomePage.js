@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById("idHeader");
     const headerLogo = document.getElementById("idHeaderLogo");
+    const headerLogoScrolled = document.getElementById("idHeaderLogoScrolled")
     const headerOptions = document.getElementById("idHeaderOptions");
+    const option = headerOptions.querySelectorAll('*');
     const menuBtn = document.getElementById("idMenuBtn");
     const produtosTalheres = document.getElementById("idProdutosTalheres");
     const produtosGuarnanapos = document.getElementById("idProdutosGuarnanapos");
@@ -31,23 +33,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Função para remover o padding com base na largura da janela
     function ajustarPadding() {
-        larguraAtual = window.innerWidth;
-        const elementos = [produtosGuarnanapos, produtosIndividuais, produtosCaminhos, produtosTalheres, produtosToalha, produtosAcessorios];
-
-        elementos.forEach(el => el.classList.remove("topPadding"));
-
-        if (larguraAtual <= 600) {
+        if(larguraAtual<= 1200){
             produtosTalheres.classList.add("topPadding");
-        } else if (larguraAtual <= 1200) {
-            produtosTalheres.classList.add("topPadding");
-            produtosAcessorios.classList.add("topPadding");
             produtosToalha.classList.add("topPadding");
-        } else {
-            produtosTalheres.classList.add("topPadding");
             produtosAcessorios.classList.add("topPadding");
+        }else if (larguraAtual<=600){
+
+        }else if(larguraAtual>1200){
+            produtosTalheres.classList.add("topPadding");
             produtosToalha.classList.add("topPadding");
+            produtosCaminhos.classList.add("topPadding");
+            produtosIndividuais.classList.add("topPadding");
         }
-    }
+    
+        }
+
+        function esconderElementos(){
+            if(larguraAtual<=1200){
+                option.forEach(function(elemento) {
+                    elemento.classList.add('hidden');
+                });
+                headerLogoScrolled.classList.remove('hidden');
+                headerOptions.classList.remove('hidden');
+                menuBtn.classList.remove('hidden');
+            } 
+        }
 
     // Função para tratar o scroll da página
     function handleScroll() {
@@ -55,20 +65,27 @@ document.addEventListener("DOMContentLoaded", function() {
             scrollBtn.classList.add("faded");
             scrollBtn.classList.remove("visible");
             menuBtn.classList.remove("hidden");
+            headerLogoScrolled.classList.remove("hidden");
             closeMenu();
             menuClicked = false;
         } else {
             scrollBtn.classList.remove("faded");
             scrollBtn.classList.add("visible");
             menuBtn.classList.add("hidden");
+            headerLogoScrolled.classList.add("hidden");
         }
+
     }
+    
 
     //Abre menu
     function openMenu(){
         header.classList.add("scrolled");
-        headerLogo.classList.add("hidden")
+        headerLogo.classList.add("hidden");
         headerOptions.classList.add("headerOptionsScrolled");
+        option.forEach(function(elemento) {
+            elemento.classList.remove('hidden');
+        });
     }
 
     //Fecha menu
@@ -77,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
         headerLogo.classList.remove("hidden");
         header.style.animation = "SlideUp 0.5 ease-in-out";
         headerOptions.classList.remove("headerOptionsScrolled");
+        if(larguraAtual<=1200)
+            esconderElementos();
     }
 
     // Função para voltar ao topo da página
@@ -99,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Adiciona o evento de clique no logo do menu
-    menuLogo.addEventListener("click", scrollToTop);
+    headerLogoScrolled.addEventListener("click", scrollToTop);
 
     // Debouncing para o evento de resize
     let resizeTimeout;
@@ -110,4 +129,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Chama a função para ajustar o padding ao carregar a página
     ajustarPadding();
+    esconderElementos();
 });

@@ -32,15 +32,6 @@ p {
     margin: 0;
 }
 
-header {
-    display: flex;
-    height: 10vh;
-    gap: 10%;
-    width: 100%;
-    padding-top: 1%;
-    z-index: 99;
-}
-
 .sombra {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -127,6 +118,16 @@ img {
     margin-left: 10%;
 }
 
+.headerLogoScrolled{
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url(../Imagens/Logos/logoDT\ -\ Carimbo\ -\ branco.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .scrolled{
     position: fixed;
     top: 0;
@@ -174,6 +175,10 @@ img {
     mask-size: 50%;
     mask-repeat: no-repeat;
     mask-position: 50%;
+}
+
+.headerLogoScrolled{
+
 }
 
 @keyframes slideDown {
@@ -294,7 +299,7 @@ img {
 .aboutSectionDesc {
     position: relative;
     width: 60%;
-    top: 90%;
+    top: 80%;
     font-family: "Bona Nova", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -375,7 +380,7 @@ img {
 
 .buttonMaisProdutosWrapper {
     position: absolute;
-    top: 85%;
+    top: 95%;
     display: flex;
     justify-content: center;
     height: 7vh;
@@ -543,6 +548,44 @@ img {
     font-size: 0.98em;
 }
 
+/* 1920 */
+
+@media (max-width: 1920px) and (max-height:900px) {
+    .aboutSectionDesc{
+        top: 90%;
+    }
+
+    .produtosTitleWrapper{
+        top: 130%;
+    }
+}
+
+@media (max-width: 1920px) and (max-height:600px) {
+    .aboutSection{
+        height: 120vh;
+    }
+
+   .aboutSectionText{
+    padding:0;
+   }
+
+   .slogan{
+    line-height: 0.6em;
+   }
+
+   .produtosTitleWrapper{
+    top: 150%;
+   }
+
+   .produtosSection{
+    height: 200vh;
+   }
+
+   .areasSection{
+    height: 100vh;
+   }
+}
+
 
 @media (max-width: 1366px) {
 
@@ -556,24 +599,38 @@ img {
 
     /* Nav Bar */
 
-    .menuBtnWrapper {
-        height: 50px;
+    .header{
+        height: 10vh;
+    }
+    .headerLogoScrolled{
+        width: 100px;
+    }
+
+    .headerMenuBtnWrapper{
         width: 50px;
+        height: 50px;
     }
-
-    .menuLogoScrolled{
-        width: 75px;
-    }
-
     /* About Section */
 
     .aboutSection{
-        height: 80vh;
+        height: 75vh;
+    }
+
+    .aboutSectionImg{
+        height: 80%;
+    }
+
+    .aboutSectionText{
+        padding: 0;
     }
 
     .aboutSectionDesc{
-        top: 85%;
+        top: 75%;
         width: 100%;
+    }
+
+    .produtosTitleWrapper{
+        top: 65%;
     }
 
     .imgWrapper{
@@ -601,98 +658,43 @@ img {
 
 }
 
-@media (max-width:1200px) {
-    body {
-        font-size: 0.8em;
+@media (max-width:1200px){
+
+
+ 
+    .header{
+        height: 10vh;
     }
 
-    .menuOptionsWrapper a {
-        color: white;
-        line-height: 2em;
-        font-size: 1.5em;
+   .headerMenuBtnWrapper{
+    left: 84%;
+   }
+
+    .scrolled{
+        height: 40vh;
     }
 
-    .divWrapper {
-        height: 50vh;
-        width: 45%;
+    .topPadding{
+        padding-top: 20%;
     }
 
-    .topPadding {
-        padding-top: 15vh;
+    .produtosTitleWrapper{
+            top: 70%;
     }
 
-    /*Nav Bar*/
-
-    .menuBtnWrapper {
-        height: 50px;
-        width: 50px;
-        right: 10%;
+    .divWrapper{
+        width: 48%;
     }
 
-    .menuLogoScrolled{
-        width: 75px;
-    }   
-
-    .menuLogoWrapper img {
-        object-fit: contain;
+    .divWrapper img{
+        height: 70%;
     }
 
-    /*About Section*/
-
-    .aboutSection {
-        height: 60vh;
-    }
-
-    .slogan {
-        line-height: 0.7em;
-    }
-
-    .aboutSectionDesc {
-        top: 80%;
-        width: 100%;
-    }
-
-    .aboutSectionImg {
-        height: 60vh;
-
-    }
-
-
-    /*Produtos Section*/
-
-    .produtosSection {
-        margin-top: 10%;
-    }
-
-
-    .produtosTitleWrapper {
-        width: 30%;
-        top: 70%;
-    }
-
-    .acesoriosWrapper {
-        top: 65%;
-        left: 0;
-    }
-
-    
     .buttonMaisProdutosWrapper{
-        left: 28%;
-    }
-
-
-  
-    /* Rodape*/
-
-    .rodape {
-        height: 50vh;
-    }
-
-    .scrollArrowWrapper {
-        display: none;
+        left: 25%;
+        top: 95%;
     }
 }
-
 
 @media (max-width:1200px) and (max-height:900px) {
 
@@ -717,7 +719,7 @@ img {
     }
 
     .buttonMaisProdutosWrapper{
-        top: 98%;
+        top: 95%;
     }
 
 }
@@ -818,84 +820,45 @@ img {
 
 @media (max-width:900px) and (max-height:600px) {
 
+    .scrolled{
+        height: 80vh;
+    }
+
+    .produtosSection{
+        height: 200vh;
+        margin-bottom: 130vh;
+    }
+
+    .divWrapper{
+        height: 40%;
+    }
+
     .areasSection{
         height: 100vh;
     }
+
 }
 
-@media (max-width:600px) {
-    body {
-        font-size: 0.5em;
-    }
 
-    header {
-        top: 0;
-        height: 5vh;
-    }
+    @media (max-width:600px){
 
-    .menuBtnWrapper {
-        width: 30px;
-        height: 30px;
-    }
+        .header{
+            height: 10vh;
+            background-color: white;
+            position: fixed !important;
+            z-index: 3;
+        }
 
-    .sloganElegancia {
-        top: 5%;
-    }
+        .scrolled{
+            height: 40vh;
+        }
 
-    .aboutSection {
-        gap: 2%;
-    }
+        .headerMenuBtnWrapper{
+            left: 83%;
+            height: 40px;
+            width: 40px;
+        }
 
-    .aboutSectionText {
-        font-size: 0.6em;
-    }
-
-    .aboutSectionDesc {
-        font-size: 2em;
-        width: 100%;
-    }
-
-    .aboutSectionImg {
-        height: 60%;
-        width: 80%;
-    }
-
-    .produtosSection {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 0;
-    }
-
-    .produtosTitleWrapper {
-        width: 90%;
-        top: 85%;
-        font-size: 1.2em;
-    }
-
-    .topPadding {
-        padding-top: 20%;
-    }
-
-    .acesoriosWrapper {
-        width: 100%;
-    }
-
-    .areasSection {
-        flex-direction: column;
-        height: 50vh;
-    }
-
-    .areasImgWrapper {
-        height: 40%;
-        width: 100%;
-    }
-
-    .areasTextWrapper {
-        padding-top: 10%;
-        padding-left: 5%;
-        width: 100%;
-    }
-
-    @media (max-width:600px) and (max-height:1080px) {
         .aboutSection {
             flex-direction: column;
             position: relative;
@@ -904,6 +867,7 @@ img {
 
         .aboutSectionImg {
             height: 60vh;
+            width: 100%;
         }
 
         .aboutSectionDesc {
@@ -911,9 +875,47 @@ img {
             top: 103%;
         }
 
+        .produtosSection{
+            margin-bottom: 40%;
+        }
         .produtosTitleWrapper {
-            top: 85%;
+            top: 90%;
+            width: 80%;
+        }
+
+        .divWrapper{
+            width: 100%;
+        }
+
+        .buttonMaisProdutosWrapper{
+            top: 100%;
+            left: 0;
         }
 
     }
-}
+
+    @media (max-width:600px) and (max-height:900px){
+        .aboutSection{
+            height: 100vh;
+        }
+
+        .produtosTitleWrapper{
+            top: 115%;
+        }
+    }
+
+    @media (max-width:600px) and (max-height:600px){
+
+        .produtosSection{
+            height: auto
+        }
+
+        .divWrapper{
+            height: 80vh;
+        }
+
+        .buttonMaisProdutosWrapper{
+            top: 270%;
+        }
+
+    }
