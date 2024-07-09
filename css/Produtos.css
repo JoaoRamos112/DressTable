@@ -93,102 +93,59 @@ img {
     margin-right: 10%;
 }
 
-.divWrapper {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
 /* Nav bar */
 
-.hidden {
-    display: none !important; 
+
+.header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
 }
 
-.menuLogoScrolled {
-    position: fixed;
-    height: 10%;
-    width: 10%;
-    top: 0;
-    left: 2%;
-    background-image: url(../Imagens/Logos/AF\ -\ imagem\ perfil\ -\ icon\ DRESS\ TABLE.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    z-index: 4;
-}
-
-.menuLogoWrapper {
-    height: 100%; 
-    width: 40%;
+.headerLogo{
+    height: 50%;
+    width: 20%;
     min-height: 30%;
-    margin-left: 10%;
     cursor: pointer;
+    margin-right: 20%;
     object-fit: contain;
 }
 
-.menuOptionsWrapper {
+.headerLogo img {
+    object-fit: contain;
+}
+
+.headerOptions{
     display: flex;
     justify-content: flex-end;
-    gap: 0.7em; 
+    gap: 0.7em;
     width: 20%;
     padding-top: 2%;
     text-align: center;
     margin-left: 10%;
 }
 
-
-.menuLogoWrapper img {
-    width: 40%;
-}
-
-.menuWraperScrolled{
+.scrolled{
     position: fixed;
     top: 0;
-    display: flex;
+    display: flex !important;
     width: 100%;
     height: 80vh;
     background-color: #d1d7ad;
-    z-index: 3 ;
+    z-index: 3;
     animation: slideDown 0.5s ease-in-out;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.headerOptionsScrolled{
+    flex-direction: column !important;
+    justify-content: center;
+    margin: 0;
+    font-size: 1.8em;
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-}
-
-
-.menuOptionsWrapperScrolled {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    text-align: center;
-    font-size: 3em; 
-    gap: 0.2em;   
-}
-
-
-.menuBtnWrapper {
+.headerMenuBtnWrapper {
     position: fixed;
     width: 75px;
     height: 75px;
@@ -201,6 +158,11 @@ img {
     margin-top: 1%;
     cursor: pointer;
     z-index: 4;
+    opacity: 0.5;
+}
+
+.menuBtnWrapper:hover {
+    opacity: 1;
 }
 
 .menuBtn {
@@ -212,6 +174,30 @@ img {
     mask-size: 50%;
     mask-repeat: no-repeat;
     mask-position: 50%;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 }
 
 /* Back Btn */

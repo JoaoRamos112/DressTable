@@ -3,16 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const headerLogo = document.getElementById("idHeaderLogo");
     const headerOptions = document.getElementById("idHeaderOptions");
     const menuBtn = document.getElementById("idMenuBtn");
-    const produtosTalheres = document.getElementById("idProdutosTalheres");
-    const produtosGuarnanapos = document.getElementById("idProdutosGuarnanapos");
-    const produtosToalha = document.getElementById("idProdutosToalha");
-    const produtosCaminhos = document.getElementById("idProdutosCaminhos");
-    const produtosAcessorios = document.getElementById("idProdutosAcessorios");
-    const produtosIndividuais = document.getElementById("idProdutosIndividuais");
     const scrollBtn = document.getElementById("idScrollArrow");
+    const backBtn = document.getElementById("idBackArrow");
     let menuClicked = true;
     let larguraAtual = window.innerWidth;
-
     const elements = document.querySelectorAll('.scroll-animation');
 
     // Função para tratar animação de entrada
@@ -24,30 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
+    
     // Configuração do IntersectionObserver
     const observer = new IntersectionObserver(handleScrollAnimations, { threshold: 0.1 });
     elements.forEach(element => observer.observe(element));
-
-    // Função para remover o padding com base na largura da janela
-    function ajustarPadding() {
-        larguraAtual = window.innerWidth;
-        const elementos = [produtosGuarnanapos, produtosIndividuais, produtosCaminhos, produtosTalheres, produtosToalha, produtosAcessorios];
-
-        elementos.forEach(el => el.classList.remove("topPadding"));
-
-        if (larguraAtual <= 600) {
-            produtosTalheres.classList.add("topPadding");
-        } else if (larguraAtual <= 1200) {
-            produtosTalheres.classList.add("topPadding");
-            produtosAcessorios.classList.add("topPadding");
-            produtosToalha.classList.add("topPadding");
-        } else {
-            produtosTalheres.classList.add("topPadding");
-            produtosAcessorios.classList.add("topPadding");
-            produtosToalha.classList.add("topPadding");
-        }
-    }
 
     // Função para tratar o scroll da página
     function handleScroll() {
@@ -64,24 +38,29 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    //Abre menu
+    // Abre menu
     function openMenu(){
         header.classList.add("scrolled");
-        headerLogo.classList.add("hidden")
+        headerLogo.classList.add("hidden");
         headerOptions.classList.add("headerOptionsScrolled");
     }
 
-    //Fecha menu
+    // Fecha menu
     function closeMenu(){
         header.classList.remove("scrolled");
         headerLogo.classList.remove("hidden");
-        header.style.animation = "SlideUp 0.5 ease-in-out";
+        header.style.animation = "SlideUp 0.5s ease-in-out";
         headerOptions.classList.remove("headerOptionsScrolled");
     }
 
     // Função para voltar ao topo da página
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Função para voltar para a HomePage
+    function goBack(){
+        window.location.href = "HomePage.html";
     }
 
     // Adiciona o evento de scroll na página
@@ -92,14 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!menuClicked){
             openMenu();
             menuClicked = true;
-        }else{
+        } else {
             closeMenu();
             menuClicked = false;
         }
     });
 
     // Adiciona o evento de clique no logo do menu
-    menuLogo.addEventListener("click", scrollToTop);
+    headerLogo.addEventListener("click", scrollToTop);
+
+    // Evento para o botão de voltar
+    backBtn.addEventListener("click", goBack);
 
     // Debouncing para o evento de resize
     let resizeTimeout;
@@ -107,7 +89,4 @@ document.addEventListener("DOMContentLoaded", function() {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(ajustarPadding, 150);
     });
-
-    // Chama a função para ajustar o padding ao carregar a página
-    ajustarPadding();
 });
