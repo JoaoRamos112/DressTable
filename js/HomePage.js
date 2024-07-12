@@ -33,20 +33,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Função para remover o padding com base na largura da janela
     function ajustarPadding() {
-        if(larguraAtual<= 1200){
-            produtosTalheres.classList.add("topPadding");
-            produtosToalha.classList.add("topPadding");
-            produtosAcessorios.classList.add("topPadding");
-        }else if (larguraAtual<=600){
-
-        }else if(larguraAtual>1200){
+         if(larguraAtual>1200){
             produtosTalheres.classList.add("topPadding");
             produtosToalha.classList.add("topPadding");
             produtosCaminhos.classList.add("topPadding");
             produtosIndividuais.classList.add("topPadding");
         }
-    
-        }
+    }
 
         function esconderElementos(){
             if(larguraAtual<=1200){
