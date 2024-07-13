@@ -32,17 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
     elements.forEach(element => observer.observe(element));
 
     // Função para remover o padding com base na largura da janela
-    function ajustarPadding() {
-         if(larguraAtual>1200){
-            produtosTalheres.classList.add("topPadding");
-            produtosToalha.classList.add("topPadding");
-            produtosCaminhos.classList.add("topPadding");
-            produtosIndividuais.classList.add("topPadding");
-        }
-    }
 
         function esconderElementos(){
-            if(larguraAtual<=1200){
+            if(larguraAtual<=600){
                 option.forEach(function(elemento) {
                     elemento.classList.add('hidden');
                 });
@@ -76,9 +68,11 @@ document.addEventListener("DOMContentLoaded", function() {
         header.classList.add("scrolled");
         headerLogo.classList.add("hidden");
         headerOptions.classList.add("headerOptionsScrolled");
+        headerOptions.classList.remove("headerOptionsSmall");
         option.forEach(function(elemento) {
             elemento.classList.remove('hidden');
         });
+
     }
 
     //Fecha menu
@@ -86,9 +80,11 @@ document.addEventListener("DOMContentLoaded", function() {
         header.classList.remove("scrolled");
         headerLogo.classList.remove("hidden");
         header.style.animation = "SlideUp 0.5 ease-in-out";
+        headerOptions.classList.add("headerOptionsSmall");
         headerOptions.classList.remove("headerOptionsScrolled");
         if(larguraAtual<=1200)
             esconderElementos();
+
     }
 
     // Função para voltar ao topo da página
@@ -120,7 +116,5 @@ document.addEventListener("DOMContentLoaded", function() {
         resizeTimeout = setTimeout(ajustarPadding, 150);
     });
 
-    // Chama a função para ajustar o padding ao carregar a página
-    ajustarPadding();
-    esconderElementos();
+
 });

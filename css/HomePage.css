@@ -85,6 +85,7 @@ img {
     display: none !important;
 }
 
+
 /* Nav bar */
 
 
@@ -146,6 +147,7 @@ img {
     margin: 0;
     font-size: 1.8em;
 }
+
 
 .headerMenuBtnWrapper {
     position: fixed;
@@ -541,4 +543,38 @@ img {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
     font-size: 0.98em;
+}
+
+/* Meida Qyerys */
+
+@media (max-width:600px) {
+
+ .headerOptionsSmall{
+    display: none;
+ }
+
+ .headerLogoScrolled{
+    display: block !important;
+ }
+
+ .headerMenuBtnWrapper{
+    display: block !important;
+ }
+
+ .topPadding{
+    padding-top: 0 !important;
+ }
+
+ .produtosSection{
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5vh;
+
+ }
+
+ .divWrapper{
+    padding-bottom: 0;
+    width: 80vw;
+ }
+
 }
