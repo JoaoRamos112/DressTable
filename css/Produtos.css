@@ -47,7 +47,7 @@ p {
 
 .input{
     border-radius: 10px;
-    width: 100%;
+    width: 95%;
     border: none;
     color: #4c5b63;
     font-family: "Bona Nova", sans-serif;
@@ -59,8 +59,8 @@ p {
 }
 
 textarea{
-        border-radius: 10px;
-    width: 100%;
+    border-radius: 10px;
+    width: 95%;
     border: none;
     color: #4c5b63;
     font-family: "Bona Nova", sans-serif;
@@ -370,20 +370,25 @@ img {
 
 /* Image Grid*/
 
-.imageGrid{
-    max-height: 2000px;
+.imageGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);  
     gap: 2%;
     margin-top: 5%;
+    max-height: 2000px; /* Mantém a altura máxima */
+    margin-bottom: 5rem; /* Adiciona margem inferior */
+}
+
+.imageGrid img{
+    height: 100%;
 }
 
 /* Sustentavel Section */
 
 .produtoSustentavelSection{
     position: relative;
-    max-height: 700px;
+    height: 60em;
     width: 75%;
     margin-top: 10%;
     margin-bottom: 10%;
@@ -393,6 +398,8 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
 
 .produtoSustentavelSection p{
     color:white;
@@ -431,10 +438,11 @@ img {
 
 /* Rodape */
 
-.rodape{
-    height: 150vh;
+
+.rodape {
+    left: 0;
     width: 100%;
-    background-color:#8699a3 ;
+    background-color: #8699a3;
     overflow: hidden;
 }
 
@@ -449,18 +457,17 @@ img {
 .contactSection{
     display: flex;
     flex-direction: column;
-    width: 40%;
-    margin-left: 30%;
+    max-width: 1200px;   
+    margin-inline: 20vw;
     text-align: center;
-    padding-top: 10%;
-    margin-bottom: 10%;
 }
 
 .inputGrid{
+    max-width: 98%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr); 
-    gap: 8%;
+    gap: 5%;
 }
 
 .checkboxWrapper{
@@ -501,8 +508,8 @@ img {
 .enviarImgWrapper{
     background-color: #d1d7ad;
     border-radius: 100%;
-    height: 50px;
-    width: 50px;
+    height: 7em;
+    width: 7em;
 
 }
 
@@ -518,12 +525,16 @@ img {
 }
 
 
+
 .rodapeLogo {
+    margin-top: 5vh;
     width: 100%;
     height: 15%;
+    text-align: center;
 }
 
-.rodapeLogo img{
+.rodapeLogo img {
+    width: 15em;
     object-fit: contain;
 }
 
@@ -562,13 +573,57 @@ img {
 .options p {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
-    font-size: 1.96em; 
+    font-size: 1.96em;
 }
 
 .tradeMark {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
-    font-size: 0.98em; 
+    font-size: 0.98em;
+}
+
+@media (max-width: 600px) {
+    .headerOptionsSmall {
+        display: none;
+    }
+
+    .headerLogoScrolled {
+        display: block !important;
+    }
+
+    .headerMenuBtnWrapper {
+        display: block !important;
+    }
+
+    .backArrowWrapper{
+        display: none;
+    }
+
+    .scrollArrowWrapper{
+        display: none;
+    }
+
+    .aboutSection {
+        margin-bottom: 3vh;
+    }
+
+    .imageGrid {
+        grid-template-columns: repeat(1, 1fr);
+        max-height: none;  
+        margin-top: 10em;
+    }
+
+    .imageGrid img {
+        height: 80%;
+    }
+
+    .produtoSustentavelSection{
+        margin-top: 40em;
+    }
+
+    .rodape {
+        margin-top: 2rem; /* Adiciona margem superior para separação */
+    }
 }
 
 /*<600px,>601px,768px,992px,1200px*/

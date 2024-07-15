@@ -5,12 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const headerOptions = document.getElementById("idHeaderOptions");
     const option = headerOptions.querySelectorAll('*');
     const menuBtn = document.getElementById("idMenuBtn");
-    const produtosTalheres = document.getElementById("idProdutosTalheres");
-    const produtosGuarnanapos = document.getElementById("idProdutosGuarnanapos");
-    const produtosToalha = document.getElementById("idProdutosToalha");
-    const produtosCaminhos = document.getElementById("idProdutosCaminhos");
-    const produtosAcessorios = document.getElementById("idProdutosAcessorios");
-    const produtosIndividuais = document.getElementById("idProdutosIndividuais");
     const scrollBtn = document.getElementById("idScrollArrow");
     let menuClicked = true;
     let larguraAtual = window.innerWidth;
@@ -108,13 +102,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Adiciona o evento de clique no logo do menu
     headerLogoScrolled.addEventListener("click", scrollToTop);
-
-    // Debouncing para o evento de resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(ajustarPadding, 150);
-    });
-
 
 });

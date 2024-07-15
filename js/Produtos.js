@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById("idHeader");
     const headerLogo = document.getElementById("idHeaderLogo");
     const headerOptions = document.getElementById("idHeaderOptions");
+    const headerLogoScrolled = document.getElementById("idHeaderLogoScrolled")
+    const option = headerOptions.querySelectorAll('*');
     const menuBtn = document.getElementById("idMenuBtn");
     const scrollBtn = document.getElementById("idScrollArrow");
     const backBtn = document.getElementById("idBackArrow");
@@ -38,19 +40,39 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    function esconderElementos(){
+        if(larguraAtual<=600){
+            option.forEach(function(elemento) {
+                elemento.classList.add('hidden');
+            });
+            headerLogoScrolled.classList.remove('hidden');
+            headerOptions.classList.remove('hidden');
+            menuBtn.classList.remove('hidden');
+        } 
+    }
+
     // Abre menu
     function openMenu(){
         header.classList.add("scrolled");
         headerLogo.classList.add("hidden");
         headerOptions.classList.add("headerOptionsScrolled");
+        headerOptions.classList.remove("headerOptionsSmall");
+        option.forEach(function(elemento) {
+            elemento.classList.remove('hidden');
+        });
+
     }
 
     // Fecha menu
     function closeMenu(){
         header.classList.remove("scrolled");
         headerLogo.classList.remove("hidden");
-        header.style.animation = "SlideUp 0.5s ease-in-out";
+        header.style.animation = "SlideUp 0.5 ease-in-out";
+        headerOptions.classList.add("headerOptionsSmall");
         headerOptions.classList.remove("headerOptionsScrolled");
+        if(larguraAtual<=1200)
+            esconderElementos();
+
     }
 
     // Função para voltar ao topo da página
@@ -83,10 +105,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Evento para o botão de voltar
     backBtn.addEventListener("click", goBack);
 
-    // Debouncing para o evento de resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(ajustarPadding, 150);
-    });
+
 });
