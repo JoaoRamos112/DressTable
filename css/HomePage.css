@@ -141,7 +141,7 @@ img {
     top: 0;
     display: flex !important;
     width: 100%;
-    height: 80vh;
+    height: 80vh !important;
     background-color: #d1d7ad;
     z-index: 3;
     animation: slideDown 0.5s ease-in-out;
@@ -151,7 +151,7 @@ img {
     flex-direction: column !important;
     justify-content: center;
     margin: 0;
-    font-size: 1.8em;
+    font-size: 3em;
 }
 
 
@@ -551,17 +551,23 @@ img {
 
 @media (max-width:600px) {
 
- .headerOptionsSmall{
-    display: none;
- }
+    .header{
+        position: fixed ;
+        background-color: white;
+        height: 7em;
+        z-index: 99;
+    }
+    .headerOptionsSmall {
+        display: none;
+    }
 
- .headerLogoScrolled{
-    display: block !important;
- }
+    .headerLogoScrolled {
+        display: block !important;
+    }
 
- .headerMenuBtnWrapper{
-    display: block !important;
- }
+    .headerMenuBtnWrapper {
+        display: block !important;
+    }
 
  .topPadding{
     padding-top: 0 !important;

@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById("idHeader");
     const headerLogo = document.getElementById("idHeaderLogo");
-    const headerOptions = document.getElementById("idHeaderOptions");
     const headerLogoScrolled = document.getElementById("idHeaderLogoScrolled")
+    const headerOptions = document.getElementById("idHeaderOptions");
     const option = headerOptions.querySelectorAll('*');
     const menuBtn = document.getElementById("idMenuBtn");
     const scrollBtn = document.getElementById("idScrollArrow");
@@ -31,15 +31,18 @@ document.addEventListener("DOMContentLoaded", function() {
             scrollBtn.classList.add("faded");
             scrollBtn.classList.remove("visible");
             menuBtn.classList.remove("hidden");
+            headerLogoScrolled.classList.remove("hidden");
             closeMenu();
             menuClicked = false;
         } else {
             scrollBtn.classList.remove("faded");
             scrollBtn.classList.add("visible");
             menuBtn.classList.add("hidden");
+            headerLogoScrolled.classList.add("hidden");
         }
     }
 
+   
     function esconderElementos(){
         if(larguraAtual<=600){
             option.forEach(function(elemento) {

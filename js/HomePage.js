@@ -27,16 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Função para remover o padding com base na largura da janela
 
-        function esconderElementos(){
-            if(larguraAtual<=600){
-                option.forEach(function(elemento) {
-                    elemento.classList.add('hidden');
-                });
-                headerLogoScrolled.classList.remove('hidden');
-                headerOptions.classList.remove('hidden');
-                menuBtn.classList.remove('hidden');
-            } 
-        }
 
     // Função para tratar o scroll da página
     function handleScroll() {
@@ -56,7 +46,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
     
-
+    function esconderElementos(){
+        if(larguraAtual<=600){
+            option.forEach(function(elemento) {
+                elemento.classList.add('hidden');
+            });
+            headerLogoScrolled.classList.remove('hidden');
+            headerOptions.classList.remove('hidden');
+            menuBtn.classList.remove('hidden');
+        } 
+    }
+    
     //Abre menu
     function openMenu(){
         header.classList.add("scrolled");
