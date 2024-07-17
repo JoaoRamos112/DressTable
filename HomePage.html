@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=MonteCarlo&family=Sora:wght@100..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/HomePage.css">
         <script src="./js/HomePage.js"></script>
         <title>DressTable</title>
@@ -15,7 +18,7 @@
         </div>
         <div class="headerOptions headerOptionsSmall" id="idHeaderOptions">
             <a href="Sobre ">sobre</a>
-            <a href="Areas">areas</a>
+            <a href="Areas">áreas</a>
             <a href="./Produtos.html">produtos</a>
             <a href="Personalizar">personalizar</a>
             <a href="Sustentabilidade">sustentibilidade</a>
@@ -33,21 +36,22 @@
             <div class="scrollArrowWrapper" id="idScrollArrow">
                 <p>scroll</p>
                 <img src="./Imagens/Icons/back.svg" alt>
-            </div>  
+            </div>
+
             <div class="aboutSection scroll-animation padding">
                 <div class="aboutSectionText"> 
                     <div class="titleSlogan">
                         <p class="title">hotel & restaurant supplies</p>
-                        <p class="slogan">vestimos<br>mesas com</p>
-                        <p class="sloganElegancia">Elegãncia</p>
+                        <p class="slogan bona-nova-regular"><span class="bona-nova-regular-italic">vestimos</span><br>mesas com</p>
+                        <p class="sloganElegancia montecarlo-regular">Elegãncia</p>
                         
                     </div>
-                    <div class="aboutSectionDesc">
-                        <p> A dress Table foca-se na produção de produtos
-                            personalizados para <br>
-                            promover e elevar os seu <strong>RESTAURANTE<br>
+                    <div class="aboutSectionDesc sora-regular">
+                        <p> A dress Table foca-se na produção <br> de produtos
+                            para personalizados para
+                            promover e elevar os seu <strong>RESTAURANTE,
                                 HOTEL</strong> e serviço
-                            de<strong>CATERING</strong>, com<br>
+                            de <strong>CATERING</strong>, com
                             total qualidade e elegãncia.
                         </p>
                     </div>
@@ -56,95 +60,108 @@
                     <img
                         src="./Imagens/Imagens_Geral/banner-guardanapos-toalha-de-mesa-2.jpg"
                         alt>
+                    <img class="aboutSvg" src="./Imagens/Icons/texto-home-PT.svg" alt="">
+                    <img class="aboutArrow" src="./Imagens/Icons/arrow-product.svg" alt="">
                 </div>
             </div>
-            <div class="produtosTitleWrapper scroll-animation padding">
-                <p class="produtosTitle">produtos personalizados</p>
-                <p class="produtoSlogan">elevar a sua marca em cada detalhe</p>
-            </div>
+
             <div class="produtosSection scroll-animation padding ">
-                <div class="produtoTalheres scroll-animation divWrapper topPadding "
-                    id="idProdutosTalheres">
-                    <p class="titleStyle">bolsas talheres e acessorios</p>
-                    <p class="descStyle">artigos descartáveis e acessorios por
-                        medida,
-                        em diferentes materiais e modelos
-                        totalmente personalizavis</p>
-                    <img class="imgWrapper sombra"
-                        src="./Imagens/Imagens_Geral/guardanapo-descartavel-restaurante-dona-bia.webp"
-                        alt>
-                </div>
-                <div class="produtoGuarnanapos scroll-animation divWrapper"
-                    id="idProdutosGuarnanapos">
-                    <p class="titleStyle">guardanapos descartáveis</p>
-                    <p class="descStyle">vasta variedade de modelos em diferentes
-                        tipos de materiais descartáveis, do P&P aos
-                        materiais da gama tecido-não-tecido
-                    </p>
-                    <img class="imgWrapper sombra"
-                        src="./Imagens/Imagens_Geral/guardapano-descartavel-5-sentidos.webp"
-                        alt>
-                </div>
-                <div class="produtoToalha scroll-animation divWrapper topPadding "
-                    id="idProdutosToalha">
-                    <p class="titleStyle">toalhas de mesa anti-nódoa</p>
-                    <p class="descStyle">com confeção propria, produzidas por
-                        medida, em tecido anti-nódoa resinado,
-                        permitindo um limpeza facil
-                    </p>
-                    <img class="imgWrapper sombra"
-                        src="./Imagens/Imagens_Geral/la-pajarita-newtex-basic-tablecloth.webp"
-                        alt>
-                </div>
-                <div class="produtosCaminhos scroll-animation  divWrapper topPadding"
-                    id="idProdutosCaminhos">
-                    <p class="titleStyle">caminhos de<br> mesa - runners</p>
-                    <p class="descStyle">confecionados por medida, personalizaveis,
-                        em diferentes
-                        tipos de materiais descartáveis ou em tecido anti-nódoa
-                        resinado
-                    </p>
-                    <img class="sombra imgWrapper"
-                        src="./Imagens/Imagens_Geral/adama-alma-runner-de-mesa.webp"
-                        alt>
-                </div>
-                <div class="produtosAcessórios scroll-animation divWrapper"
-                    id="idProdutosAcessorios">
-                    <div class="acesoriosWrapper">
-                        <p class="titleStyle">acessorios de mesa e ementas</p>
-                        <p class="descStyle">vasta gama de ementas menus e
-                            acessórios adicionais de mesa,
-                            em diferentes materiais e modelos, personalizados com a
-                            sua marca
-                        </p>
+                <div class="produtosCell">
+                    <div class="produtosTitleWrapper scroll-animation padding">
+                        <p class="produtosTitle sora-regular">produtos personalizados</p>
+                        <p class="produtoSlogan sora-regular">elevar a sua marca em cada detalhe</p>
                     </div>
-                    <img class="imgWrapper sombra"
-                        src="./Imagens/Imagens_Geral/dagstyle-menu-restaurante-chef-sage.webp"
-                        alt>
+                    <div class="produtoTalheres scroll-animation divWrapper  " id="idProdutosTalheres">
+                        <div class="produtosTextWrapper">
+                            <p class="titleStyle">bolsas talheres e acessorios</p>
+                            <p class="descStyle">artigos descartáveis e acessorios por
+                                medida,
+                                em diferentes materiais e modelos
+                                totalmente personalizavis</p>
+
+                        </div>
+                        <img class="imgWrapper sombra"
+                             src="./Imagens/Imagens_Geral/guardanapo-descartavel-restaurante-dona-bia.webp"
+                             alt>
+                    </div>
+                    <div class="produtosCaminhos scroll-animation  divWrapper " id="idProdutosCaminhos">
+                        <div class="produtosTextWrapper">
+                            <p class="titleStyle">caminhos de<br> mesa - runners</p>
+                            <p class="descStyle">confecionados por medida, personalizaveis,
+                                em diferentes
+                                tipos de materiais descartáveis ou em tecido anti-nódoa
+                                resinado
+                            </p>
+                        </div>
+                        <img class="sombra imgWrapper"
+                             src="./Imagens/Imagens_Geral/adama-alma-runner-de-mesa.webp"
+                             alt>
+                    </div>
                 </div>
-                <div
-                    class="produtosIndividuais scroll-animation  divWrapper topPadding"
-                    id="idProdutosIndividuais">
-                    <p class="titleStyle">individuais de mesa</p>
-                    <p class="descStyle individuaisSpacecing">soluçoes de
-                        individuais de mesa, de fácil limpeza e de grande
-                        resistência, para uma utilização profissional
-                    </p>
-                    <img class="imgWrapper sombra"
-                        src="./Imagens/Imagens_Geral/adama-alma-individuais-retangulares-padrao.jpg"
-                        alt>
+                <div class="produtosCell middle">
+                    <div class="produtoGuarnanapos scroll-animation divWrapper" id="idProdutosGuarnanapos">
+                        <div class="produtosTextWrapper">
+                            <p class="titleStyle">guardanapos descartáveis</p>
+                            <p class="descStyle">vasta variedade de modelos em diferentes
+                                tipos de materiais descartáveis, do P&P aos
+                                materiais da gama tecido-não-tecido
+                            </p>
+                        </div>
+                        <img class="imgWrapper sombra"
+                             src="./Imagens/Imagens_Geral/guardapano-descartavel-5-sentidos.webp"
+                             alt>
+                    </div>
+                    <div class="produtosAcessórios scroll-animation divWrapper" id="idProdutosAcessorios">
+                        <div class="produtosTextWrapper">
+                            <p class="titleStyle">acessorios de mesa e ementas</p>
+                            <p class="descStyle">vasta gama de ementas menus e
+                                acessórios adicionais de mesa,
+                                em diferentes materiais e modelos, personalizados com a
+                                sua marca
+                            </p>
+                        </div>
+                        <img class="imgWrapper sombra"
+                             src="./Imagens/Imagens_Geral/dagstyle-menu-restaurante-chef-sage.webp"
+                             alt>
+                    </div>
+                    <button class="buttonMaisProdutosWrapper">mais produtos</button>
                 </div>
-                <div class="buttonMaisProdutosWrapper">
-                    <button>mais produtos</button>
+                <div class="produtosCell">
+                    <div class="produtoToalha scroll-animation divWrapper  " id="idProdutosToalha">
+                        <div class="produtosTextWrapper">
+                            <p class="titleStyle">toalhas de mesa anti-nódoa</p>
+                            <p class="descStyle">com confeção propria, produzidas por
+                                medida, em tecido anti-nódoa resinado,
+                                permitindo um limpeza facil
+                            </p>
+                        </div>
+                        <img class="imgWrapper sombra"
+                             src="./Imagens/Imagens_Geral/la-pajarita-newtex-basic-tablecloth.webp"
+                             alt>
+                    </div>
+                    <div
+                            class="produtosIndividuais scroll-animation  divWrapper " id="idProdutosIndividuais">
+                        <div class="produtosTextWrapper">
+                            <p class="titleStyle">individuais de mesa</p>
+                            <p class="descStyle individuaisSpacecing">soluçoes de
+                                individuais de mesa, de fácil limpeza e de grande
+                                resistência, para uma utilização profissional
+                            </p>
+                        </div>
+                        <img class="imgWrapper sombra"
+                             src="./Imagens/Imagens_Geral/adama-alma-individuais-retangulares-padrao.jpg"
+                             alt>
+                    </div>
                 </div>
             </div>
+
             <div class="areasSection scroll-animation padding">
-                    <img class="areasImgWrapper sombra"
+                    <img class="areasImgWrapper"
                         src="./Imagens/Imagens_Geral/produtos-para-restaurantes.png"
                         alt>
                 <div class="areasTextWrapper">
                     <div class="areasTitle">áreas que atuamos</div>
-                    <div class="areasText">
+                    <div class="areasText bona-nova-regular">
                         <p>restauração</p>
                         <p>hotelaria</p>
                         <p>catering-eventos</p>
@@ -179,7 +196,7 @@
                     <img src="./Imagens/Icons/whatsapp.svg" alt>
                 </div>
                 <div class="rodapeTextWrapper">
-                    <div class="options">
+                    <div class="options sora-regular">
                         <p>privacidade</p>
                         <p>.</p>
                         <p>cookies</p>
@@ -188,7 +205,7 @@
                         <p></p>
                         <p>livro de reclamações</p>
                     </div>
-                    <div class="tradeMark">
+                    <div class="tradeMark sora-regular">
                         Dress Table Lda todos os direitos reservados.desenvolvido
                         por Bomsite
                     </div>

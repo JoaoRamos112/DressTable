@@ -1,5 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=MonteCarlo&family=Sora:wght@100..800&display=swap');
 
+/* Fonts */
+
+.sora-regular {
+           font-family: "Sora", sans-serif;
+           font-optical-sizing: auto;
+           font-weight: 400;
+           font-style: normal;
+}
+
+.montecarlo-regular {
+    font-family: "MonteCarlo", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bona-nova-bold {
+    font-family: "Bona Nova", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bona-nova-regular-italic {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bona-nova-regular {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 :root {
     --ff-sora:"Sora", sans-serif;
     --ff-bonaNova:"Bona Nova", sans-serif;
@@ -24,7 +58,7 @@ a {
     color: var(--azulClaro-color);
     padding-left: 2%;
     font-family: "Sora", sans-serif;
-    font-size: 1.5em;
+    font-size: 0.8em;
 }
 
 a:hover {
@@ -59,16 +93,14 @@ img {
 
 
 .padding {
-    margin-left: 10%;
-    margin-right: 10%;
+  margin-inline: 10%;
 }
 
 .divWrapper {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding-bottom: 200px;
-    width: 32%;
+    width: 100%;
 }
 
 .divWrapperNoPadding{
@@ -76,15 +108,6 @@ img {
     flex-direction: column;
     overflow: hidden;
     width: 32%;
-}
-
-.topPadding {
-    padding-top: 10%;
-    padding-bottom: 0;
-}
-
-.topPaddingAcessorios {
-    padding-top: 50%;
 }
 
 .hidden {
@@ -97,22 +120,23 @@ img {
 
 .header{
     width: 100%;
+    height: 10em;
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 15%;
 }
 
 .headerLogo{
-    height: 50%;
-    width: 20%;
-    min-height: 30%;
+    width: 13em;
     cursor: pointer;
     margin-right: 20%;
     object-fit: contain;
+    margin-top: 1em;
 }
 
 .headerLogo img {
     object-fit: contain;
+    margin-left: auto;
 }
 
 
@@ -129,9 +153,9 @@ img {
 .headerLogoScrolled{
     position: fixed;
     top: 0;
-    left: 0;
-    width: 8em;
-    height: 8em;
+    left: 0.5%;
+    width: 7em;
+    height: 7em;
     background-image: url(../Imagens/Logos/logoDT\ -\ Carimbo\ -\ branco.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -155,39 +179,25 @@ img {
     font-size: 3em;
 }
 
-
 .headerMenuBtnWrapper {
     position: fixed;
-    width: 5em;
-    height: 5em;
-    right: 0;
-    top: 0%;
+    width: 3.5em;
+    height: 3.5em;
+    right: 3%;
+    top: 3%;
     border-radius: 100%;
     background-color: #d1d7ad;
     text-align: center;
-    margin-right: 3%;
-    margin-top: 1%;
     cursor: pointer;
     z-index: 4;
-    opacity: 0.5;
-}
-
-.menuBtnWrapper:hover {
-    opacity: 1;
 }
 
 .menuBtn {
-    object-fit: cover;
     height: 100%;
     width: 100%;
     background-color: white;
-    mask-image: url(../Imagens/Icons/menu.svg);
-    mask-size: 50%;
-    mask-repeat: no-repeat;
-    mask-position: 50%;
+    mask: url(../Imagens/Icons/menu.svg) no-repeat center/50%;
 }
-
-
 
 @keyframes slideDown {
     from {
@@ -219,9 +229,11 @@ img {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 140px;
-    width: 75px;
-    top: 75%;
+    height: 9em;
+    font-size: 0.8em;
+    top: 60%;
+    left: 2%;
+    opacity: 0.7;
     transition: opacity 0.5s ease;
 }
 
@@ -230,14 +242,14 @@ img {
 }
 
 .scrollArrowWrapper.visible {
-    opacity: 1;
+    opacity: 0.7;
 }
 
 
 .scrollArrowWrapper img {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 0.8em;
+    height: 0.8em;
     left: 40%;
     top: 80%;
     transform: rotate(-90deg);
@@ -254,8 +266,9 @@ img {
 .aboutSection {
     display: flex;
     margin-inline: 10vw;
-    max-width: 1400px;
+    margin-bottom: 16vh;
     max-height: 1000px;
+    gap: 5em;
 }
 
 .aboutSectionText {
@@ -267,6 +280,8 @@ img {
 
 .titleSlogan {
     position: absolute;
+    top: 20%;
+    left: 4%;
 }
 
 .title {
@@ -274,87 +289,118 @@ img {
     top: 10%;
     margin: 0;
     font-family: "Sora", sans-serif;
-    color: #4c5b63;
+    color: #8699a3;
 }
 
 .slogan {
     position: relative;
     margin: 0;
     top: 10%;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: clamp(5vw, 4rem, 8vw);
+    line-height: 0.8em;
+    font-size: 8.5em;
     color: #8699a3;
     z-index: 2;
 }
 
 .sloganElegancia {
     position: relative;
-    top: -0.8em;
+    top: -0.7em;
     left: 10%;
-    font-family: "MonteCarlo", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 10em;
+    font-size: 11em;
     color: var(--branco-color);
     z-index: 2;
 }
 
 .aboutSectionDesc {
     position: relative; 
-    top: 60%;
-    max-width: 80%;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.4em;
+    top: 80%;
+    max-width: 65%;
+    font-size: 0.9em;
     color: var(--azulEscuro-color);
 }
 
+
 .aboutSectionImg {
+    position: relative;
     overflow: hidden;
-    max-width: 60%;
     height: 100%;
+    width: 90em;
+    border-radius: 20px;
 }
 
 .aboutSectionImg img {
-    height: 100% !important;
-    width: 100% !important;
+    height: 100%;
+    width: 100%;
+}
+
+.aboutSvg {
+    position: absolute;
+    width: 7em !important;
+    height: 7em !important;
+    bottom: 5%;
+    right: 5%;
+}
+
+.aboutArrow {
+    position: absolute;
+    width: 10em !important;
+    height: 10em !important;
+    bottom: 2.3%;
+    right: 2%;
+}
+
+/* Produtos title Wrapper */
+
+.produtosTitleWrapper {
+    position: absolute;
+    top: -5%;
+    left: -8%;
+    max-width: 25%;
+    line-height: 5em;
+}
+
+.produtosTitle {
+    color: #8699a3;
+    font-size: 1em;
+}
+
+.produtoSlogan {
+    color: #8699a3;
+    margin-top: 0;
+    font-size: 2.7em;
+    line-height: 1em;
 }
 
 /* Produtos Section */
 .produtosSection {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-inline: 10vw;
-    max-width: 1400px;
+    gap: 4em;
     max-height: 3000px;
 }
 
-.produtosTitleWrapper {
-    max-width: 20%;
+.produtosCell{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20%;
+    gap: 4.3em;
 }
 
-.produtosTitle {
-    font-family: "Sora", sans-serif;
-    color: #8699a3;
+.middle{
+    margin-top: 0 !important;
 }
 
-.produtoSlogan {
-    font-family: "Sora", sans-serif;
-    font-size: 3.5em;
-    line-height: 1.4em;
-    color: #8699a3;
-    margin-top: 0;
+.produtosTextWrapper{
+    width: 85%;
+    margin-inline: auto;
 }
 
 .titleStyle {
-    font-family: "Sora", sans-serif;
+    font-family: "Bona Nova", sans-serif;
     color: #8699a3;
-    font-size: 2.8em;
+    font-size: 2.7em;
 }
 
 .titleStyle:hover {
@@ -365,7 +411,7 @@ img {
 .descStyle {
     font-family: "Sora", sans-serif;
     color: #8699a3;
-    font-size: 1.12em;
+    font-size: 0.8em;
     margin-bottom: 5%;
 }
 
@@ -375,87 +421,67 @@ img {
 }
 
 .imgWrapper {
-    height: 30em;
+    height: 29em;
     border-radius: 20px;
 }
 
-.buttonMaisProdutosWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh; 
-    width: 100%;
-    margin-top: 2%;
-    position: relative;
-}
+/* buttonProdutos */
 
-.buttonMaisProdutosWrapper button {
+.buttonMaisProdutosWrapper{
+    margin-inline: auto;
     font-family: "Sora", sans-serif;
-    height: 100%;
-    width: 30em;
-    max-height: 75px;
+    height: 5em;
+    width: 17em;
     border-radius: 20px;
     background: none;
     color: #8699a3;
     border: 1px solid #8699a3;
 }
 
-.buttonMaisProdutosWrapper button:hover {
+.buttonMaisProdutosWrapper:hover {
     background-color: #d1d7ad;
     cursor: pointer;
     border: none;
 }
 
-.individuaisSpacecing {
-    margin-bottom: 20%;
-}
-
 /* Areas */
 
     .areasSection {
-        max-height:900px;
         display: flex;
         justify-content: center;
-        gap: 5%;
-        margin-block: 10vh;
+        gap: 6%;
+        margin-top: 8em;
+        margin-bottom: 12em;
     }
 
     .areasImgWrapper {
-     width: 60vw;
+        width: 65%;
+        height: 30em;
     }
 
     .areasTextWrapper {
         width: 60%;
+        margin-top: 10em;
     }
 
     .areasTitle {
-        font-family: "Sora", sans-serif;
         color: #8699a3;
-        font-size: 1.4em;
+        font-size: 1.5em;
         padding-bottom: 3%;
     }
 
     .areasTextWrapper p {
-        font-family: "Sora", sans-serif;
         color: #4c5b63;
-        font-size: 4.2em;
+        font-size: 3em;
     }
 
-/* Rodape */
-
-.rodape {
-    left: 0;
-    max-height: 1900px;
-    width: 100%;
-    background-color: #8699a3;
-    overflow: hidden;
-}
+/* WordCarrocel */
 
 .wordCarrocel {
     display: block !important;
     overflow: hidden;
     white-space: nowrap;
-    margin-bottom: 10%;
+    margin-block: 6em;
 }
 
 .wordWrapper {
@@ -466,8 +492,6 @@ img {
     white-space: nowrap;
     animation: 10s Scrolling infinite linear;
 }
-
-
 
 .wordWrapper p {
     display: inline-block;
@@ -498,10 +522,20 @@ img {
 }
 
 
-.rodapeLogo {
+/* Rodape */
+
+.rodape {
     width: 100%;
-    height: 15%;
+    background-color: #8699a3;
+    overflow: hidden;
+    padding-bottom: 3em;
+}
+
+.rodapeLogo {
+    height: 8em;
+    width: 8em;
     text-align: center;
+    margin-inline: auto;
 }
 
 .rodapeIcons {
@@ -509,15 +543,10 @@ img {
     justify-content: center;
     gap: 1em;
     width: 100%;
-    height: 3%;
-    filter: hue-rotate(--branco-color);
+    height: 1em;
     margin-top: 2%;
 }
 
-.rodapeIcons img {
-    object-fit: contain;
-    width: 2em;
-}
 
 .rodapeTextWrapper {
     display: flex;
@@ -537,15 +566,14 @@ img {
 }
 
 .options p {
-    font-family: "Bona Nova", sans-serif;
-    color: #d1d7ad;
-    font-size: 1.96em;
+    font-size: 1.2em;
+    color: white;
 }
 
 .tradeMark {
-    font-family: "Bona Nova", sans-serif;
-    color: #d1d7ad;
-    font-size: 0.98em;
+    color: white;
+    font-size: 0.8em;
+    opacity: 0.7;
 }
 
 /* Meida Querys */
