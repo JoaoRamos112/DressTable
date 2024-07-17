@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=MonteCarlo&family=Sora:wght@100..800&display=swap');
 
+/* Fonts */
+
+.sora-regular {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montecarlo-regular {
+    font-family: "MonteCarlo", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bona-nova-bold {
+    font-family: "Bona Nova", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bona-nova-regular-italic {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bona-nova-regular {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
     --azulClaro-color: #8699a3;
     --branco-color: #d1d7ad;
@@ -73,20 +106,16 @@ textarea{
 }
 
 img {
-    border-radius: 20px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    display: block;
 }
 
-.sombra{
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-}
+
 
 .padding {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-inline: 10%;
 }
+
 
 .hidden {
     display: none !important;
@@ -96,124 +125,9 @@ img {
 /* Nav bar */
 
 
-.header{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-}
 
-.headerLogo{
-    height: 50%;
-    width: 20%;
-    min-height: 30%;
-    cursor: pointer;
-    margin-right: 20%;
-    object-fit: contain;
-}
-
-.headerLogo img {
-    object-fit: contain;
-}
-
-
-.headerOptions{
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.7em;
-    width: 20%;
-    padding-top: 2%;
-    text-align: center;
-    margin-left: 10%;
-}
-
-.headerLogoScrolled{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 8em;
-    height: 8em;
-    background-image: url(../Imagens/Logos/logoDT\ -\ Carimbo\ -\ branco.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.scrolled{
-    position: fixed;
-    top: 0;
-    display: flex !important;
-    width: 100%;
-    height: 80vh !important;
-    background-color: #d1d7ad;
-    z-index: 3;
-    animation: slideDown 0.5s ease-in-out;
-}
-
-.headerOptionsScrolled{
-    flex-direction: column !important;
-    justify-content: center;
-    margin: 0;
-    font-size: 3em;
-}
-
-
-.headerMenuBtnWrapper {
-    position: fixed;
-    width: 5em;
-    height: 5em;
-    right: 0;
-    top: 0%;
-    border-radius: 100%;
-    background-color: #d1d7ad;
-    text-align: center;
-    margin-right: 3%;
-    margin-top: 1%;
-    cursor: pointer;
-    z-index: 4;
-    opacity: 0.5;
-}
-
-.menuBtnWrapper:hover {
-    opacity: 1;
-}
-
-.menuBtn {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    mask-image: url(../Imagens/Icons/menu.svg);
-    mask-size: 50%;
-    mask-repeat: no-repeat;
-    mask-position: 50%;
-}
-
-
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-}
 /* Back Btn */
+
 .backArrowWrapper{
     position: fixed;
     display: flex;

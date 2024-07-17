@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const option = headerOptions.querySelectorAll('*');
     const menuBtn = document.getElementById("idMenuBtn");
     const scrollBtn = document.getElementById("idScrollArrow");
-    let menuClicked = true;
+
     let larguraAtual = window.innerWidth;
 
     const elements = document.querySelectorAll('.scroll-animation');
@@ -24,9 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Configuração do IntersectionObserver
     const observer = new IntersectionObserver(handleScrollAnimations, { threshold: 0.1 });
     elements.forEach(element => observer.observe(element));
-
-    // Função para remover o padding com base na largura da janela
-
 
     // Função para tratar o scroll da página
     function handleScroll() {

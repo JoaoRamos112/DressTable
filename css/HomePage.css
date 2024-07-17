@@ -51,21 +51,6 @@ body {
     font-size: 1vw;
 }
 
-a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: var(--azulClaro-color);
-    padding-left: 2%;
-    font-family: "Sora", sans-serif;
-    font-size: 0.8em;
-}
-
-a:hover {
-    color: #4c5b63;
-    transition: ease 0.5s;
-}
-
 p {
     margin: 0;
 }
@@ -74,11 +59,6 @@ img {
     max-width: 100%;
     display: block;
 }
-
-.sombra {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-}
-
 
 .scroll-animation {
     opacity: 0;
@@ -99,129 +79,15 @@ img {
 .divWrapper {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     width: 100%;
 }
 
-.divWrapperNoPadding{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 32%;
-}
 
 .hidden {
     display: none !important;
 }
 
 
-/* Nav bar */
-
-
-.header{
-    width: 100%;
-    height: 10em;
-    display: flex;
-    justify-content: center;
-    gap: 15%;
-}
-
-.headerLogo{
-    width: 13em;
-    cursor: pointer;
-    margin-right: 20%;
-    object-fit: contain;
-    margin-top: 1em;
-}
-
-.headerLogo img {
-    object-fit: contain;
-    margin-left: auto;
-}
-
-
-.headerOptions{
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.7em;
-    width: 20%;
-    padding-top: 2%;
-    text-align: center;
-    margin-left: 10%;
-}
-
-.headerLogoScrolled{
-    position: fixed;
-    top: 0;
-    left: 0.5%;
-    width: 7em;
-    height: 7em;
-    background-image: url(../Imagens/Logos/logoDT\ -\ Carimbo\ -\ branco.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.scrolled{
-    position: fixed;
-    top: 0;
-    display: flex !important;
-    width: 100%;
-    height: 80vh !important;
-    background-color: #d1d7ad;
-    z-index: 3;
-    animation: slideDown 0.5s ease-in-out;
-}
-
-.headerOptionsScrolled{
-    flex-direction: column !important;
-    justify-content: center;
-    margin: 0;
-    font-size: 3em;
-}
-
-.headerMenuBtnWrapper {
-    position: fixed;
-    width: 3.5em;
-    height: 3.5em;
-    right: 3%;
-    top: 3%;
-    border-radius: 100%;
-    background-color: #d1d7ad;
-    text-align: center;
-    cursor: pointer;
-    z-index: 4;
-}
-
-.menuBtn {
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    mask: url(../Imagens/Icons/menu.svg) no-repeat center/50%;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-}
 
 /* Scroll Btn */
 .scrollArrowWrapper {
@@ -374,10 +240,13 @@ img {
 /* Produtos Section */
 .produtosSection {
     position: relative;
+    width: 80%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     gap: 4em;
     max-height: 3000px;
+    margin-inline: auto;
 }
 
 .produtosCell{
@@ -404,8 +273,9 @@ img {
 }
 
 .titleStyle:hover {
-    color: #d1d7ad;
+    color: #4c5b63;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .descStyle {
@@ -415,14 +285,38 @@ img {
     margin-bottom: 5%;
 }
 
-.descStyle:hover {
-    color: #d1d7ad;
-    cursor: pointer;
+.produtosArrowWrapper {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    background-color: #d1d7ad;
+    border-radius: 100%;
+    height: 4em;
+    width: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
+
+.produtosArrow {
+    height: 170%;
+    width: 170%;
+    border-radius: inherit;
+    background-color: white;
+    mask: url("/Imagens/Icons/arrow-product.svg") no-repeat center / cover;
+
+}
+
 
 .imgWrapper {
     height: 29em;
     border-radius: 20px;
+}
+
+.imgWrapper:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 8px #4c5b63;
 }
 
 /* buttonProdutos */
@@ -625,6 +519,7 @@ img {
  .divWrapper{
     padding-bottom: 0;
     width: 80vw;
+
  }
 
  .areasSection{
