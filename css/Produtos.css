@@ -70,7 +70,7 @@ p {
 .scroll-animation {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .scroll-animation.show {
@@ -78,32 +78,6 @@ p {
     transform: translateY(0);
 }
 
-.input{
-    border-radius: 10px;
-    width: 95%;
-    border: none;
-    color: #4c5b63;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5em;
-    padding: 1em;
-    margin-bottom: 2%;
-}
-
-textarea{
-    border-radius: 10px;
-    width: 95%;
-    border: none;
-    color: #4c5b63;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5em;
-    padding: 1em;
-    margin-top: 3%;
-    resize: none;
-}
 
 img {
     max-width: 100%;
@@ -121,23 +95,15 @@ img {
     display: none !important;
 }
 
-
-/* Nav bar */
-
-
-
 /* Back Btn */
 
 .backArrowWrapper{
     position: fixed;
-    display: flex;
-    justify-content: start;
-    gap: 7%;
-    flex-direction: column;
-    height: 100%;
-    width: 75px;
-    cursor: pointer;
-    transition: opacity 0.5s ease; 
+    padding-top: 2%;
+    height: 100vh;
+    left: 2%;
+    font-size: 0.8em;
+    opacity: 0.5;
 }
 
 .backArrowWrapper:hover{
@@ -146,15 +112,17 @@ img {
 }
 
 .backArrowWrapper img{
-    width: 20px;
-    height: 20px;
-    margin-left: 35%;
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    left: 40%;
+    top: 0;
 }
 .backArrowWrapper p{
     transform: rotate(-90deg);
     font-family: "Sora", sans-serif;
     color: #4c5b63;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 /* Scroll Btn */
@@ -163,43 +131,42 @@ img {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 140px;
-    width: 75px;
-    top: 75%;
+    height: 9em;
+    font-size: 0.8em;
+    top: 80%;
+    left: 2%;
+    opacity: 0.5;
     transition: opacity 0.5s ease;
 }
 
 .scrollArrowWrapper.faded {
-    opacity: 0; 
+    opacity: 0;
 }
 
 .scrollArrowWrapper.visible {
-    opacity: 1; 
+    opacity: 0.7;
 }
 
 
-.scrollArrowWrapper img{
+.scrollArrowWrapper img {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 0.8em;
+    height: 0.8em;
     left: 40%;
     top: 80%;
     transform: rotate(-90deg);
 }
-.scrollArrowWrapper p{
+
+.scrollArrowWrapper p {
     transform: rotate(-90deg);
     font-family: "Sora", sans-serif;
     color: #4c5b63;
-    font-size: 1.3em;
+    font-size: 1em;
 }
-
-
 
 /* About Section */
 .aboutSection {
     display: flex;
-    max-height: 1000px;
-    max-width: 1400px;
     justify-content: space-between;
     gap: 10%;
     margin-bottom: 15vh;
@@ -215,77 +182,98 @@ img {
 
 .titleSlogan {
     position: relative;
-    height: 40%;
-    padding-top: 10%;
 }
 
-.title {
-    margin: 0;
-    font-family: "Sora", sans-serif;
-    color: #4c5b63;
-}
 
 .slogan{
-    margin: 0;
-    max-width: 50vw;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 7em;
+    font-size: 5.2em;
+    line-height: 1em;
     color: #8699a3;
     z-index: 2;
 }
 
 .sloganProdutos{
     position: absolute;
-    max-width: 50vw;
-    top: 50%;
-    left: 25%;
-    font-family: "MonteCarlo", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12em;
+    top: 40%;
+    left: 20%;
+    font-size: 8em;
     color: var(--branco-color);
     z-index: 2;
 }
 
 .aboutSectionDesc{
-    position: absolute;
-    max-width: 40vw;
-    top: 65%;
-    width: 80%;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.8em;
-    color: var(--azulEscuro-color);
+    display: flex;
+    margin-top: 22%;
+    width: 100%;
+    font-size: 1.3em;
+    color: #4c5b63;
     margin-bottom: 10vh;
+    gap: 7em;
+}
+
+.aboutSectionp p{
+    flex: 80;
+}
+
+.shareWrapper{
+    opacity: 0.7;
+    display: flex;
+    font-size: 0.6em;
+    gap: 1em;
+    margin-top: 10%;
+}
+
+.shareImg{
+    height: 2em;
+    width: 2em;
+    background-color:#4c5b63;
+    mask: url("/Imagens/Sobre/share.svg");
+    mask-size: cover;
+    mask-repeat: no-repeat;
 }
 
 .aboutSectionDesc2{
-    position: absolute;
-    max-width: 40vw;
-    top: 75%;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 1.5em;
+    width: 90%;
+    font-size: 1em;
     color: var(--azulEscuro-color);
 }
 
 .aboutSectionDesc2 p{
-    margin-top: 5%;
+    line-height: 1.5em;
+}
+
+.spacing{
+    margin-top: 6%;
 }
 
 .aboutSectionImg {
     float: right;
     overflow: hidden;
-    max-height: 40%;
-    padding-top: 10%
+    width: 35em;
+    height: 45em;
+    border-radius: 20px;
 }
 
 .aboutSectionImg img{
+    height: 100%;
     object-position: right;
+}
+
+
+.aboutSvg {
+    position: absolute;
+    width: 7em !important;
+    height: 7em !important;
+    bottom: 5%;
+    right: 5%;
+}
+
+.aboutArrow {
+    position: absolute;
+    width: 10em !important;
+    height: 10em !important;
+    bottom: 2.3%;
+    right: 3%;
 }
 
 /* Image Grid*/
@@ -294,135 +282,191 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);  
-    gap: 2%;
+    gap: 1em;
     margin-top: 5%;
     max-height: 2000px; /* Mantém a altura máxima */
     margin-bottom: 5rem; /* Adiciona margem inferior */
 }
 
 .imageGrid img{
-    height: 100%;
+    border-radius: 20px;
+    height: 25em;
+    width: 100%;
 }
 
 /* Sustentavel Section */
 
 .produtoSustentavelSection{
     position: relative;
-    height: 60em;
-    width: 75%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    padding-left: 5%;
+    height: 29em;
+    width: 80%;
+    margin-block: 8%;
+    margin-inline: auto;
     border-radius: 20px;
-    background-image: url(../Imagens/Sobre/produtos-sustentaveis-mesa-restauracao.png);
     background-size: cover;
+    background-image: url(../Imagens/Sobre/produtos-sustentaveis-mesa-restauracao.png);
     background-repeat: no-repeat;
-}
-
-
-
-.produtoSustentavelSection p{
-    color:white;
-    opacity: 75%;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+    background-position-y: -100px;
+    color: #d1d7ad;
 }
 
 .sustentavelTitle{
     position: absolute;
     top: 20%;
     left: 10%;
-    font-size: 7em;
+    font-size: 4em;
     line-height: 0.8em;
 }
 
 .sustentavelSlogan{
     position: absolute;
-    top: 30%;
-    font-family: "MonteCarlo", cursive !important;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12em;
+    top: 20%;
+    left: 5%;
+    font-size: 9em;
+    color: white;
 }
 
 .sustentavelDesc{
     position: absolute;
-    top: 80%;
+    top: 75%;
+    left: 5%;
     width: 40%;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 1.4em;
+    font-size: 0.8em;
+    color: white;
 }
+
 
 /* Rodape */
 
 
-.rodape {
-    left: 0;
-    width: 100%;
-    background-color: #8699a3;
-    overflow: hidden;
-}
-
-.contactSection p{
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 3em;
-    color: #d1d7ad;
-}
 
 .contactSection{
     display: flex;
     flex-direction: column;
-    max-width: 1200px;   
-    margin-inline: 20vw;
+    width: 50%;
+    margin-inline: auto;
     text-align: center;
+    gap: 1em;
+    margin-top: 4.5em;
+    margin-bottom: 5em;
+}
+
+.contactSection p{
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    color: #d1d7ad;
+}
+
+.contactInputWrapper{
+    width: 90%;
 }
 
 .inputGrid{
-    max-width: 98%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); 
-    gap: 5%;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap:4em ;
 }
+
+.input{
+    border-radius: 25px;
+    width: 100%;
+    height: 2em;
+    border: none;
+    color: #4c5b63;
+    padding: 1em;
+    margin-bottom: 0.6em;
+    font-size: 1.1em;
+}
+
+
+textarea{
+    border-radius: 20px;
+    width: 100%;
+    height: 9em;
+    border: none;
+    color: #4c5b63;
+    font-size: 1.1em;
+    padding: 1em;
+    resize: none;
+}
+
 
 .checkboxWrapper{
     width: 100%;
     height: 2em;
-    margin-top: 5%;
+    margin-top: 2em;
     display: flex;
     justify-content: space-between;
     gap: 20%;
 }
 
-.checkboxAndText{
+.checkboxAndText {
     width: 70%;
     display: flex;
+    align-items: center;
 }
 
-.checkboxAndText label{
-    font-size: 1.2em;
-    font-family: "Bona Nova", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    color: #d1d7ad;
+.checkboxAndText label {
+    font-size: 0.7em;
+    color: white;
     text-align: left;
+    width: 70%;
 }
 
-.checkboxAndText input{
-    height: 2em;
-    width: 2em;
+
+.checkboxAndText input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkboxAndText input + label::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #d1d7ad;
+    margin-right: 10px;
+}
+
+.checkboxAndText input:checked + label::before {
+    content: "\2714";
+    font-size: 1em;
+    color: #d1d7ad;
+    text-align: right;
+    line-height: 1em;
 }
 
 .checkboxEnviarWrapper{
     display: flex;
-    justify-content: space-between;
     width: 40%;
-    gap: 5%;
+    margin-right: 10%;
+}
+
+
+
+.produtosArrowWrapper {
+    background-color: #d1d7ad;
+    border-radius: 100%;
+    height: 3.8em;
+    width: 3.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.produtosArrow {
+    height: 170%;
+    width: 170%;
+    border-radius: inherit;
+    background-color: white;
+    mask: url("/Imagens/Icons/arrow-product.svg") no-repeat center / cover;
+
 }
 
 .enviarImgWrapper{
@@ -433,73 +477,8 @@ img {
 
 }
 
-.checkboxEnviarWrapper img{
-    height: 60%;
-    width: 60%;
-    margin-top: 15%;
-}
-
-
 .checkboxEnviar{
     font-size: 3em !important;
-}
-
-
-
-.rodapeLogo {
-    margin-top: 5vh;
-    width: 100%;
-    height: 15%;
-    text-align: center;
-}
-
-.rodapeLogo img {
-    width: 15em;
-    object-fit: contain;
-}
-
-.rodapeIcons {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    width: 100%;
-    height: 3%;
-    filter: hue-rotate(--branco-color);
-    margin-top: 2%;
-}
-
-.rodapeIcons img {
-    object-fit: contain;
-    width: 2em;
-}
-
-.rodapeTextWrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    margin-top: 4%;
-}
-
-.options {
-    display: flex;
-    justify-content: center;
-    gap: 1%;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1%;
-}
-
-.options p {
-    font-family: "Bona Nova", sans-serif;
-    color: #d1d7ad;
-    font-size: 1.96em;
-}
-
-.tradeMark {
-    font-family: "Bona Nova", sans-serif;
-    color: #d1d7ad;
-    font-size: 0.98em;
 }
 
 @media (max-width: 600px) {
