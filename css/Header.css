@@ -18,6 +18,7 @@ a:hover {
 
 .selected{
     font-weight: 700;
+    color: #4c5b63;
 }
 
 .header{
@@ -178,5 +179,34 @@ a:hover {
     color: white;
     font-size: 0.8em;
     opacity: 0.7;
+}
+
+
+@media (max-width: 900px) {
+
+    main{
+        margin-top: 10em;
+    }
+
+    .header {
+        position: fixed;
+        background-color: white;
+        height: 7em;
+        z-index: 99;
+        top: 0;
+    }
+
+    .headerOptionsSmall {
+        display: none;
+    }
+
+    .headerLogoScrolled {
+        display: block !important;
+    }
+
+    .headerMenuBtnWrapper {
+        display: block !important;
+    }
+
 }
 

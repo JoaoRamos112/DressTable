@@ -266,6 +266,7 @@ img {
     height: 7em !important;
     bottom: 5%;
     right: 5%;
+    animation: rotate 5s linear infinite;
 }
 
 .aboutArrow {
@@ -275,6 +276,16 @@ img {
     bottom: 2.3%;
     right: 3%;
 }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Image Grid*/
 
@@ -481,25 +492,8 @@ textarea{
     font-size: 3em !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
-    .header{
-        position: fixed ;
-        background-color: white;
-        height: 7em;
-        z-index: 99;
-    }
-    .headerOptionsSmall {
-        display: none;
-    }
-
-    .headerLogoScrolled {
-        display: block !important;
-    }
-
-    .headerMenuBtnWrapper {
-        display: block !important;
-    }
 
     .backArrowWrapper{
         display: none;
@@ -509,27 +503,95 @@ textarea{
         display: none;
     }
 
-    .aboutSection {
-        margin-bottom: 3vh;
+    .aboutSection{
+        flex-direction: column;
+        gap: 5em;
+        margin-top: 5em;
     }
+
+    .aboutSectionImg{
+        height: 30em;
+        width: 60%;
+        margin-inline: auto;
+    }
+
+    .aboutSectionText{
+        margin-inline: auto;
+        width: 80%;
+        text-align: center;
+    }
+    
+    .shareWrapper{
+        position: absolute;
+        top: 0;
+    }
+
+    .aboutSectionImg img{
+        width: 100%;
+    }
+
+    .aboutSvg{
+        right: 21%;
+        bottom: 1%;
+    }
+
+    .aboutArrow{
+        right: 19%;
+        bottom: -1%;
+    }
+
+    .titleSlogan{
+        top: 0;
+    }
+
+    .aboutSectionDesc{
+        top: 13em;
+        left: 15%;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .aboutSectionDesc2{
+        text-align: center;
+        font-size: 1.5em;
+    }
+
 
     .imageGrid {
         grid-template-columns: repeat(1, 1fr);
         max-height: none;  
         margin-top: 10em;
+        gap: 5em;
+        width: 50%;
+        margin-inline: auto;
     }
 
     .imageGrid img {
-        height: 80%;
     }
 
     .produtoSustentavelSection{
         margin-top: 40em;
     }
 
+    .produtoSustentavelSection{
+        height: 40em;
+        font-size: 2em;
+    }
+
+    .sustentavelTitle{
+        top: 5%;
+    }
+
+    .sustentavelSlogan{
+        top: 6%;
+    }
+
+    .sustentavelDesc{
+        top: 60%;
+        width: 50%;
+    }
+
     .rodape {
-        margin-top: 2rem; /* Adiciona margem superior para separação */
+        margin-top: 2rem;
     }
 }
-
-/*<600px,>601px,768px,992px,1200px*/
