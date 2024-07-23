@@ -393,19 +393,17 @@ img {
 /* WordCarrocel */
 
 .wordCarrocel {
-    display: block !important;
     overflow: hidden;
-    white-space: nowrap;
-    margin-block: 6em;
+    margin-top: 6em;
+    margin-bottom: 10em;
 }
 
 .wordWrapper {
-    display: inline-block;
-    justify-content: center;
-    gap: 5%;
-    box-sizing: border-box;
-    white-space: nowrap;
-    animation: 10s Scrolling infinite linear;
+    width: max-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3em;
+    animation: move 10s linear infinite;
 }
 
 .wordWrapper p {
@@ -413,29 +411,13 @@ img {
     font-family: "Bona Nova", sans-serif;
     color: #d1d7ad;
     font-size: 4.2em;
-    margin: 0 2%;
 }
 
-@keyframes Scrolling {
-    from {
-        transform: translateX(-50%);
-    }
-
-    to {
-        transform: translateX(50%);
+@keyframes move {
+    to{
+        transform: translate(-50%) ;
     }
 }
-
-@keyframes Scrolling1 {
-    from {
-        transform: translateX(-50%);
-    }
-
-    to {
-        transform: translateX(50%);
-    }
-}
-
 
 /* Rodape */
 
